@@ -21,11 +21,22 @@ namespace AlbionStaticDataLib.Tests.Items.Models
             //HashSet<string> b = new(a);
             //string result = string.Join(", ", b);
 
-            ItemsRoot itemsRoot = JsonSerializer.Deserialize<ItemsRoot>(json, ItemsConverter.Settings);
+            try
+            {
+                ItemsRoot itemsRoot = JsonSerializer.Deserialize<ItemsRoot>(json, ItemsConverter.Settings);
+                Assert.IsNotNull(itemsRoot);
+                Assert.IsNotNull(itemsRoot.Items);
+                Assert.AreNotEqual(0, itemsRoot.Items.Weapon.Count);
+            }
+            catch (JsonException ex)
+            {
+                // Output the exception details to the console or a log
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
+                // Re-throw the exception to cause the test to fail, or use Assert.Fail with a message.
+                throw;
+            }
 
-            Assert.IsNotNull(itemsRoot);
-            Assert.IsNotNull(itemsRoot.Items);
-            Assert.AreNotEqual(0, itemsRoot.Items.Weapon.Count);
         }
 
         //static void ExtractCraftingCategories(JsonElement element, List<string> a)

@@ -20,6 +20,6 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public bool? Craftsingleperdefault { get; set; }
 
         [JsonPropertyName("craftresource")]
-        public CraftingrequirementCraftresourceClass Craftresource { get; set; }
+        public CraftResource Craftresource { get; set; }
     }
 }

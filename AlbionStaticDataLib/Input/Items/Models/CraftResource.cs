@@ -1,10 +1,7 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Shared;
-
-namespace AlbionStaticDataLib.Input.Items.Models
+﻿namespace AlbionStaticDataLib.Input.Items.Models
 
 {
-    public class CraftingrequirementCraftresourceClass
+    public class CraftResource
     {
         [JsonPropertyName("@uniquename")]
         public string Uniquename { get; set; }

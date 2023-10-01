@@ -19,7 +19,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Craftingfocus { get; set; }
 
         [JsonPropertyName("craftresource")]
-        public List<CraftingrequirementCraftresourceClass> Craftresource { get; set; }
+        public List<CraftResource> Craftresource { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@swaptransaction")]

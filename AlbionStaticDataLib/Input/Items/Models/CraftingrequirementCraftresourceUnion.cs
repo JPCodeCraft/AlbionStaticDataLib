@@ -3,10 +3,10 @@
 {
     public struct CraftingrequirementCraftresourceUnion
     {
-        public CraftingrequirementCraftresourceClass CraftingrequirementCraftresourceClass;
-        public List<CraftingrequirementCraftresourceClass> CraftingrequirementCraftresourceClassArray;
+        public CraftResource CraftingrequirementCraftresourceClass;
+        public List<CraftResource> CraftingrequirementCraftresourceClassArray;
 
-        public static implicit operator CraftingrequirementCraftresourceUnion(CraftingrequirementCraftresourceClass CraftingrequirementCraftresourceClass) => new CraftingrequirementCraftresourceUnion { CraftingrequirementCraftresourceClass = CraftingrequirementCraftresourceClass };
-        public static implicit operator CraftingrequirementCraftresourceUnion(List<CraftingrequirementCraftresourceClass> CraftingrequirementCraftresourceClassArray) => new CraftingrequirementCraftresourceUnion { CraftingrequirementCraftresourceClassArray = CraftingrequirementCraftresourceClassArray };
+        public static implicit operator CraftingrequirementCraftresourceUnion(CraftResource CraftingrequirementCraftresourceClass) => new CraftingrequirementCraftresourceUnion { CraftingrequirementCraftresourceClass = CraftingrequirementCraftresourceClass };
+        public static implicit operator CraftingrequirementCraftresourceUnion(List<CraftResource> CraftingrequirementCraftresourceClassArray) => new CraftingrequirementCraftresourceUnion { CraftingrequirementCraftresourceClassArray = CraftingrequirementCraftresourceClassArray };
     }
 }

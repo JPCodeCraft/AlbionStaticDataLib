@@ -16,7 +16,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
                     var objectValue = JsonSerializer.Deserialize<ReplacementitemElement>(ref reader, options);
                     return new FluffyCraftresource { ReplacementitemElement = objectValue };
                 case JsonTokenType.StartArray:
-                    var arrayValue = JsonSerializer.Deserialize<List<CraftingrequirementCraftresourceClass>>(ref reader, options);
+                    var arrayValue = JsonSerializer.Deserialize<List<CraftResource>>(ref reader, options);
                     return new FluffyCraftresource { CraftingrequirementCraftresourceClassArray = arrayValue };
             }
             throw new Exception("Cannot unmarshal type FluffyCraftresource");

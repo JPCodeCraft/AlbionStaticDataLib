@@ -13,10 +13,10 @@ namespace AlbionStaticDataLib.Input.Items.Models
             switch (reader.TokenType)
             {
                 case JsonTokenType.StartObject:
-                    var objectValue = JsonSerializer.Deserialize<CraftingrequirementCraftresourceClass>(ref reader, options);
+                    var objectValue = JsonSerializer.Deserialize<CraftResource>(ref reader, options);
                     return new CraftingrequirementCraftresourceUnion { CraftingrequirementCraftresourceClass = objectValue };
                 case JsonTokenType.StartArray:
-                    var arrayValue = JsonSerializer.Deserialize<List<CraftingrequirementCraftresourceClass>>(ref reader, options);
+                    var arrayValue = JsonSerializer.Deserialize<List<CraftResource>>(ref reader, options);
                     return new CraftingrequirementCraftresourceUnion { CraftingrequirementCraftresourceClassArray = arrayValue };
             }
             throw new Exception("Cannot unmarshal type CraftingrequirementCraftresourceUnion");

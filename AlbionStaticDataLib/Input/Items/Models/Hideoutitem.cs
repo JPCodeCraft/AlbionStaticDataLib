@@ -13,8 +13,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Itemvalue { get; set; }
 
         [JsonPropertyName("@tier")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long Tier { get; set; }
+        [JsonConverter(typeof(StringToIntConverter))]
+        public int Tier { get; set; }
 
         [JsonPropertyName("@mindistance")]
         [JsonConverter(typeof(StringToLongConverter))]

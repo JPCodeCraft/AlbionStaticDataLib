@@ -1,7 +1,4 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Shared;
-
-namespace AlbionStaticDataLib.Input.Items.Models
+﻿namespace AlbionStaticDataLib.Input.Items.Models
 
 {
     public class HideoutitemCraftingrequirements
@@ -16,10 +13,11 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Craftingfocus { get; set; }
 
         [JsonPropertyName("@time")]
-        public string Time { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Time { get; set; }
 
         [JsonPropertyName("craftresource")]
-        public List<ReplacementitemElement> Craftresource { get; set; }
+        public List<CraftResource> Craftresource { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@silver")]

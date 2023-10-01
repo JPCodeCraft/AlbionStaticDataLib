@@ -1,7 +1,4 @@
-﻿using System.Text.Json;
-using System.Text.Json.Serialization;
-
-namespace AlbionStaticDataLib.Input.Shared
+﻿namespace AlbionStaticDataLib.Input.Shared
 
 {
     internal class StringToLongConverter : JsonConverter<long>
@@ -14,7 +11,7 @@ namespace AlbionStaticDataLib.Input.Shared
             {
                 return l;
             }
-            throw new Exception("Cannot unmarshal type long");
+            throw new JsonException($"Failed to parse '{value}' as long at {reader.TokenType} {reader.ValueSpan.ToString()}.");
         }
 
         public override void Write(Utf8JsonWriter writer, long value, JsonSerializerOptions options)
