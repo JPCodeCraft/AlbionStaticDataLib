@@ -7,13 +7,10 @@
         {
             Converters =
             {
-                CraftingrequirementCraftresourceUnionConverter.Singleton,
                 EnchantmentUnionConverter.Singleton,
                 FacestateConverter.Singleton,
                 StickyCraftspellConverter.Singleton,
-                PurpleCraftresourceConverter.Singleton,
                 LootUnionConverter.Singleton,
-                FluffyCraftresourceConverter.Singleton,
                 MountspellUnionConverter.Singleton,
                 IndigoCraftspellConverter.Singleton,
                 ProjectileUnionConverter.Singleton,
