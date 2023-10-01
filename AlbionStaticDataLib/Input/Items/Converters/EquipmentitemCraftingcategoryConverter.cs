@@ -1,13 +1,12 @@
-﻿using System.Text.Json;
+﻿using AlbionStaticDataLib.Input.Items.Models;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace AlbionStaticDataLib.Input.Items.Models
+namespace AlbionStaticDataLib.Input.Items.Converters
 
 {
     internal class EquipmentitemCraftingcategoryConverter : JsonConverter<EquipmentitemCraftingcategory>
     {
-        public override bool CanConvert(Type t) => t == typeof(EquipmentitemCraftingcategory);
-
         public override EquipmentitemCraftingcategory Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             var value = reader.GetString();
