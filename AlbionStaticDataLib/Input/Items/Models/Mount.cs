@@ -162,7 +162,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@longhostiledismountbuff")]
-        public Longhostiledismountbuff? Longhostiledismountbuff { get; set; }
+        public string? Longhostiledismountbuff { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@showinmarketplace")]

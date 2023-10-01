@@ -263,7 +263,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@mainhandanimationtype_attack")]
-        public MainhandanimationtypeAttack? MainhandanimationtypeAttack { get; set; }
+        public string? MainhandanimationtypeAttack { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("attackvfx")]

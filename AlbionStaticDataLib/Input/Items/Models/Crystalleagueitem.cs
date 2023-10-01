@@ -1,6 +1,4 @@
 ﻿using AlbionStaticDataLib.Input.Items.Enums;
-using AlbionStaticDataLib.Input.Shared;
-using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -38,7 +36,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Maxstacksize { get; set; }
 
         [JsonPropertyName("@namelocatag")]
-        public Namelocatag Namelocatag { get; set; }
+        public string Namelocatag { get; set; }
 
         [JsonPropertyName("@descriptionlocatag")]
         public string Descriptionlocatag { get; set; }
