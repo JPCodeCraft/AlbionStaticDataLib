@@ -46,7 +46,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Descvariable0 { get; set; }
 
         [JsonPropertyName("@salvageable")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Salvageable { get; set; }
 
         [JsonPropertyName("@itemvalue")]
@@ -54,15 +54,15 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Itemvalue { get; set; }
 
         [JsonPropertyName("@tradable")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Tradable { get; set; }
 
         [JsonPropertyName("@unlockedtocraft")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Unlockedtocraft { get; set; }
 
         [JsonPropertyName("@canbestoredinbattlevault")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Canbestoredinbattlevault { get; set; }
 
         [JsonPropertyName("craftingrequirements")]
@@ -75,7 +75,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@showinmarketplace")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Showinmarketplace { get; set; }
     }
 }

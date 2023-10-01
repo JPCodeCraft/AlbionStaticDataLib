@@ -50,7 +50,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Attackrange { get; set; }
 
         [JsonPropertyName("@twohanded")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Twohanded { get; set; }
 
         [JsonPropertyName("@tier")]
@@ -93,11 +93,11 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Mainhandanimationtype { get; set; }
 
         [JsonPropertyName("@unlockedtocraft")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Unlockedtocraft { get; set; }
 
         [JsonPropertyName("@unlockedtoequip")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Unlockedtoequip { get; set; }
 
         [JsonPropertyName("@itempower")]
@@ -106,7 +106,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@unequipincombat")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Unequipincombat { get; set; }
 
         [JsonPropertyName("@uicraftsoundstart")]
@@ -117,7 +117,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@canbeovercharged")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Canbeovercharged { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -155,7 +155,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@fishing")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Fishing { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -238,7 +238,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@showinmarketplace")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Showinmarketplace { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -247,7 +247,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@triggershealingsickness")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Triggershealingsickness { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -273,7 +273,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@tradable")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Tradable { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

@@ -33,7 +33,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@unlockedtocraft")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Unlockedtocraft { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -87,7 +87,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@showinmarketplace")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Showinmarketplace { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -100,12 +100,12 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@salvageable")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Salvageable { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@droponpvpknockdown")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Droponpvpknockdown { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -118,7 +118,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@tradable")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Tradable { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -143,12 +143,12 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@dontgivefameoncraft")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Dontgivefameoncraft { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@canbestoredinbattlevault")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Canbestoredinbattlevault { get; set; }
     }
 }

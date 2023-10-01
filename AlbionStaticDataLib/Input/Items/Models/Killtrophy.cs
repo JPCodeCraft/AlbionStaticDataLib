@@ -27,27 +27,27 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Durability { get; set; }
 
         [JsonPropertyName("@unlockedtocraft")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Unlockedtocraft { get; set; }
 
         [JsonPropertyName("@placeableindoors")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Placeableindoors { get; set; }
 
         [JsonPropertyName("@placeableoutdoors")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Placeableoutdoors { get; set; }
 
         [JsonPropertyName("@placeableindungeons")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Placeableindungeons { get; set; }
 
         [JsonPropertyName("@placeableinexpeditions")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Placeableinexpeditions { get; set; }
 
         [JsonPropertyName("@placeableonlyonislands")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Placeableonlyonislands { get; set; }
 
         [JsonPropertyName("@uisprite")]
@@ -57,7 +57,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Descriptionlocatag { get; set; }
 
         [JsonPropertyName("@showinmarketplace")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Showinmarketplace { get; set; }
 
         [JsonPropertyName("@hidefromplayeroncontext")]

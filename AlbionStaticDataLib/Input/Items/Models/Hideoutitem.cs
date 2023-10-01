@@ -41,7 +41,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public double Weight { get; set; }
 
         [JsonPropertyName("@unlockedtocraft")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Unlockedtocraft { get; set; }
 
         [JsonPropertyName("@shopcategory")]

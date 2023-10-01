@@ -19,7 +19,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public ShopsubcategoryName Shopsubcategory1 { get; set; }
 
         [JsonPropertyName("@unlockedtocraft")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Unlockedtocraft { get; set; }
 
         [JsonPropertyName("@weight")]

@@ -24,7 +24,7 @@ namespace AlbionStaticDataLib.Input.Resources.Models
         public string Harvesttimeseconds { get; set; }
 
         [JsonPropertyName("@requirestool")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Requirestool { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -64,7 +64,7 @@ namespace AlbionStaticDataLib.Input.Resources.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@isscaled")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Isscaled { get; set; }
     }
 }

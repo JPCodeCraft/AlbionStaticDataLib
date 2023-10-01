@@ -17,15 +17,15 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Placefame { get; set; }
 
         [JsonPropertyName("@pickupable")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Pickupable { get; set; }
 
         [JsonPropertyName("@destroyable")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Destroyable { get; set; }
 
         [JsonPropertyName("@unlockedtoplace")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Unlockedtoplace { get; set; }
 
         [JsonPropertyName("@maxstacksize")]
@@ -46,7 +46,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public double Weight { get; set; }
 
         [JsonPropertyName("@unlockedtocraft")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Unlockedtocraft { get; set; }
 
         [JsonPropertyName("@animationid")]
@@ -124,7 +124,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@showinmarketplace")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Showinmarketplace { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

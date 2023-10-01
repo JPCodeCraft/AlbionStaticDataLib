@@ -6,7 +6,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
     public class Journalitem
     {
         [JsonPropertyName("@salvageable")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Salvageable { get; set; }
 
         [JsonPropertyName("@uniquename")]
@@ -34,7 +34,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public double Weight { get; set; }
 
         [JsonPropertyName("@unlockedtocraft")]
-        [JsonConverter(typeof(FluffyParseStringConverter))]
+        [JsonConverter(typeof(StringToBoolConverter))]
         public bool Unlockedtocraft { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
