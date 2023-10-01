@@ -6,7 +6,7 @@ namespace AlbionStaticDataLib.Input.Resources.Models
     public class Modifier
     {
         [JsonPropertyName("@tierdifference")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Tierdifference { get; set; }
 
         [JsonPropertyName("@timefactor")]

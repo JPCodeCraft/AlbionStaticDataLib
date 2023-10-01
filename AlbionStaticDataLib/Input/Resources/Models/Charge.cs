@@ -1,5 +1,5 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Resources.Converters;
+﻿using AlbionStaticDataLib.Input.Shared;
+using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Resources.Models
 {
@@ -9,7 +9,7 @@ namespace AlbionStaticDataLib.Input.Resources.Models
         public string Level { get; set; }
 
         [JsonPropertyName("@gfxstate")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Gfxstate { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -22,7 +22,7 @@ namespace AlbionStaticDataLib.Input.Resources.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@respawncharges")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Respawncharges { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

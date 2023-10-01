@@ -1,12 +1,9 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Resources.Converters;
-
-namespace AlbionStaticDataLib.Input.Resources.Models
+﻿namespace AlbionStaticDataLib.Input.Resources.Models
 {
     public class RareState
     {
         [JsonPropertyName("@state")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long State { get; set; }
 
         [JsonPropertyName("@item")]

@@ -1,5 +1,4 @@
-﻿using AlbionStaticDataLib.Input.Localization.Converters;
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Localization.Models
 {
@@ -18,7 +17,7 @@ namespace AlbionStaticDataLib.Input.Localization.Models
         public Localized LocalizedDescriptions { get; set; }
 
         [JsonPropertyName("Index")]
-        [JsonConverter(typeof(ParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Index { get; set; }
 
         [JsonPropertyName("UniqueName")]

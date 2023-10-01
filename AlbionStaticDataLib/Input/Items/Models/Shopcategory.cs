@@ -7,10 +7,11 @@ namespace AlbionStaticDataLib.Input.Items.Models
     public class Shopcategory
     {
         [JsonPropertyName("@id")]
-        public string Id { get; set; }
+        public ShopCategoryName Id { get; set; }
 
         [JsonPropertyName("@value")]
-        public ShopCategoryName Name { get; set; }
+        [JsonConverter(typeof(StringToIntConverter))]
+        public int Value { get; set; }
 
         [JsonPropertyName("shopsubcategory")]
         public List<Shopsubcategory> Shopsubcategory { get; set; }

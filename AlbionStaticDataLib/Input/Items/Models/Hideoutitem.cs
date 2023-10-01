@@ -1,5 +1,4 @@
-﻿using AlbionStaticDataLib.Input.Items.Converters;
-using System.Text.Json.Serialization;
+﻿using AlbionStaticDataLib.Input.Items.Enums;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -46,10 +45,10 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public bool Unlockedtocraft { get; set; }
 
         [JsonPropertyName("@shopcategory")]
-        public Shop Shopcategory { get; set; }
+        public ShopCategoryName Shopcategory { get; set; }
 
         [JsonPropertyName("@shopsubcategory1")]
-        public Shop Shopsubcategory1 { get; set; }
+        public ShopsubcategoryName Shopsubcategory1 { get; set; }
 
         [JsonPropertyName("@uicraftsoundstart")]
         public string Uicraftsoundstart { get; set; }

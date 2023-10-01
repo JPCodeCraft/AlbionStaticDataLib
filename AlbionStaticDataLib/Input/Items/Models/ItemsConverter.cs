@@ -1,6 +1,4 @@
-﻿using System.Text.Json;
-
-namespace AlbionStaticDataLib.Input.Items.Models
+﻿namespace AlbionStaticDataLib.Input.Items.Models
 
 {
     public static class ItemsConverter
@@ -10,7 +8,6 @@ namespace AlbionStaticDataLib.Input.Items.Models
             Converters =
             {
                 HidefromplayeroncontextConverter.Singleton,
-                ShopConverter.Singleton,
                 ConsumablefrominventoryitemCraftingrequirementsConverter.Singleton,
                 CraftingrequirementCraftresourceUnionConverter.Singleton,
                 FactionConverter.Singleton,

@@ -1,5 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Items.Converters;
+﻿using AlbionStaticDataLib.Input.Items.Enums;
+using AlbionStaticDataLib.Input.Shared;
+using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -7,10 +8,10 @@ namespace AlbionStaticDataLib.Input.Items.Models
     public class Shopsubcategory
     {
         [JsonPropertyName("@id")]
-        public string Id { get; set; }
+        public ShopsubcategoryName Id { get; set; }
 
         [JsonPropertyName("@value")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long Value { get; set; }
+        [JsonConverter(typeof(StringToIntConverter))]
+        public int Value { get; set; }
     }
 }

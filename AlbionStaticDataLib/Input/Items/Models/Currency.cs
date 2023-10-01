@@ -1,5 +1,5 @@
-﻿using AlbionStaticDataLib.Input.Items.Converters;
-using AlbionStaticDataLib.Input.Items.Enums;
+﻿using AlbionStaticDataLib.Input.Items.Enums;
+using AlbionStaticDataLib.Input.Shared;
 using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models

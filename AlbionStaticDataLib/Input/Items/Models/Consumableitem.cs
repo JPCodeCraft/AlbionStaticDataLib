@@ -1,6 +1,4 @@
-﻿using AlbionStaticDataLib.Input.Items.Converters;
-using AlbionStaticDataLib.Input.Items.Enums;
-using System.Text.Json.Serialization;
+﻿using AlbionStaticDataLib.Input.Items.Enums;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -93,7 +91,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@craftingcategory")]
-        public Slottype? Craftingcategory { get; set; }
+        public Craftingcategory? Craftingcategory { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("craftingrequirements")]

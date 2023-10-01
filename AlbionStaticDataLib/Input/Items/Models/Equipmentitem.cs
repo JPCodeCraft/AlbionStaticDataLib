@@ -1,6 +1,4 @@
-﻿using AlbionStaticDataLib.Input.Items.Converters;
-using AlbionStaticDataLib.Input.Items.Enums;
-using System.Text.Json.Serialization;
+﻿using AlbionStaticDataLib.Input.Items.Enums;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -33,7 +31,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public ShopCategoryName Shopcategory { get; set; }
 
         [JsonPropertyName("@shopsubcategory1")]
-        public string Shopsubcategory1 { get; set; }
+        public ShopsubcategoryName Shopsubcategory1 { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@uicraftsoundstart")]
@@ -200,7 +198,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@craftingcategory")]
-        public EquipmentitemCraftingcategory? Craftingcategory { get; set; }
+        public Craftingcategory? Craftingcategory { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@combatspecachievement")]

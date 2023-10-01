@@ -6,14 +6,14 @@ namespace AlbionStaticDataLib.Input.Resources.Models
     public class TierElement
     {
         [JsonPropertyName("@tier")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Tier { get; set; }
 
         [JsonPropertyName("@item")]
         public string Item { get; set; }
 
         [JsonPropertyName("@maxchargesperharvest")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Maxchargesperharvest { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -29,12 +29,12 @@ namespace AlbionStaticDataLib.Input.Resources.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@notooltimefactor")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Notooltimefactor { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@startcharges")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Startcharges { get; set; }
 
         [JsonPropertyName("Charge")]
@@ -50,12 +50,12 @@ namespace AlbionStaticDataLib.Input.Resources.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@decaytimeseconds")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Decaytimeseconds { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@decaytimewhenexhaustedseconds")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Decaytimewhenexhaustedseconds { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
