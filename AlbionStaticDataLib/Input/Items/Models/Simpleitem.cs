@@ -91,7 +91,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@hidefromplayeroncontext")]
-        public Hidefromplayeroncontext? Hidefromplayeroncontext { get; set; }
+        public string? Hidefromplayeroncontext { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@namelocatag")]

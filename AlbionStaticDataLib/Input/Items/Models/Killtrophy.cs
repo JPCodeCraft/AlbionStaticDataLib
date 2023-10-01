@@ -53,14 +53,14 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Uisprite { get; set; }
 
         [JsonPropertyName("@descriptionlocatag")]
-        public FurnitureitemDescriptionlocatag Descriptionlocatag { get; set; }
+        public string Descriptionlocatag { get; set; }
 
         [JsonPropertyName("@showinmarketplace")]
         [JsonConverter(typeof(FluffyParseStringConverter))]
         public bool Showinmarketplace { get; set; }
 
         [JsonPropertyName("@hidefromplayeroncontext")]
-        public Hidefromplayeroncontext Hidefromplayeroncontext { get; set; }
+        public string Hidefromplayeroncontext { get; set; }
 
         [JsonPropertyName("craftingrequirements")]
         public KilltrophyCraftingrequirements Craftingrequirements { get; set; }

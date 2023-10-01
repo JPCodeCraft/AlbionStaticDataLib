@@ -136,7 +136,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@descriptionlocatag")]
-        public FurnitureitemDescriptionlocatag? Descriptionlocatag { get; set; }
+        public string? Descriptionlocatag { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@salvageable")]
@@ -145,7 +145,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@hidefromplayeroncontext")]
-        public Hidefromplayeroncontext? Hidefromplayeroncontext { get; set; }
+        public string? Hidefromplayeroncontext { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@namelocatag")]

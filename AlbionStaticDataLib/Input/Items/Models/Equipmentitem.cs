@@ -21,11 +21,11 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Abilitypower { get; set; }
 
         [JsonPropertyName("@slottype")]
-        public ItempowerprogressiontypeEnum Slottype { get; set; }
+        public Slottype Slottype { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@itempowerprogressiontype")]
-        public Iontype? Itempowerprogressiontype { get; set; }
+        public Itempowerprogressiontype? Itempowerprogressiontype { get; set; }
 
         [JsonPropertyName("@shopcategory")]
         public ShopCategoryName Shopcategory { get; set; }
@@ -90,7 +90,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@offhandanimationtype")]
-        public Iontype? Offhandanimationtype { get; set; }
+        public string? Offhandanimationtype { get; set; }
 
         [JsonPropertyName("@unlockedtocraft")]
         [JsonConverter(typeof(FluffyParseStringConverter))]
@@ -231,7 +231,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@descriptionlocatag")]
-        public EquipmentitemDescriptionlocatag? Descriptionlocatag { get; set; }
+        public string? Descriptionlocatag { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@tradable")]
@@ -254,7 +254,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@hidefromplayeroncontext")]
-        public Hidefromplayeroncontext? Hidefromplayeroncontext { get; set; }
+        public string? Hidefromplayeroncontext { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@scalemodifier")]

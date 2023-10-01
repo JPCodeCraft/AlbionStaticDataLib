@@ -154,11 +154,11 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@forceddismountbuff")]
-        public Forceddismountbuff? Forceddismountbuff { get; set; }
+        public string? Forceddismountbuff { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@hostiledismountbuff")]
-        public Hostiledismountbuff? Hostiledismountbuff { get; set; }
+        public string? Hostiledismountbuff { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@longhostiledismountbuff")]
@@ -171,7 +171,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@hidefromplayeroncontext")]
-        public Hidefromplayeroncontext? Hidefromplayeroncontext { get; set; }
+        public string? Hidefromplayeroncontext { get; set; }
 
         [JsonPropertyName("@vfxAddonKeyword")]
         public string VfxAddonKeyword { get; set; }

@@ -25,7 +25,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Abilitypower { get; set; }
 
         [JsonPropertyName("@slottype")]
-        public ItempowerprogressiontypeEnum Slottype { get; set; }
+        public Slottype Slottype { get; set; }
 
         [JsonPropertyName("@shopcategory")]
         public Attacktype Shopcategory { get; set; }
@@ -172,11 +172,11 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@fxbonename")]
-        public Fxbonename? Fxbonename { get; set; }
+        public string? Fxbonename { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@fxboneoffset")]
-        public Fxboneoffset? Fxboneoffset { get; set; }
+        public string? Fxboneoffset { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@hitpointsmax")]
@@ -189,7 +189,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@itempowerprogressiontype")]
-        public ItempowerprogressiontypeEnum? Itempowerprogressiontype { get; set; }
+        public Itempowerprogressiontype? Itempowerprogressiontype { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@focusfireprotectionpenetration")]
@@ -250,7 +250,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@hidefromplayeroncontext")]
-        public Hidefromplayeroncontext? Hidefromplayeroncontext { get; set; }
+        public string? Hidefromplayeroncontext { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@requiredaccesslevel")]

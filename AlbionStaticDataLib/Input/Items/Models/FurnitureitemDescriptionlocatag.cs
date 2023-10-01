@@ -1,5 +1,0 @@
-﻿namespace AlbionStaticDataLib.Input.Items.Models
-
-{
-    public enum FurnitureitemDescriptionlocatag { ItemsFurnitureitemPlayerislandDesc, ItemsFurnitureitemTrophyFiberDesc, ItemsFurnitureitemTrophyFishDesc, ItemsFurnitureitemTrophyGeneralDesc, ItemsFurnitureitemTrophyHideDesc, ItemsFurnitureitemTrophyMercenaryDesc, ItemsFurnitureitemTrophyOreDesc, ItemsFurnitureitemTrophyRockDesc, ItemsFurnitureitemTrophyWoodDesc, ItemsUniqueFurnitureitemAdcGlassSphereADesc, ItemsUniqueFurnitureitemOutdoorsDesc };
-}

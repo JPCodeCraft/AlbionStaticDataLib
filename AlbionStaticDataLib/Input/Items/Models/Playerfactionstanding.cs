@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using AlbionStaticDataLib.Input.Items.Enums;
 using AlbionStaticDataLib.Input.Shared;
 
 namespace AlbionStaticDataLib.Input.Items.Models

@@ -41,7 +41,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public ShopsubcategoryName Shopsubcategory1 { get; set; }
 
         [JsonPropertyName("@kind")]
-        public Kind Kind { get; set; }
+        public FarmableItemKind Kind { get; set; }
 
         [JsonPropertyName("@weight")]
         public string Weight { get; set; }
