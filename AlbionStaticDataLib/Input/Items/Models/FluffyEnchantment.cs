@@ -1,7 +1,4 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Shared;
-
-namespace AlbionStaticDataLib.Input.Items.Models
+﻿namespace AlbionStaticDataLib.Input.Items.Models
 
 {
     public class FluffyEnchantment
@@ -22,7 +19,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Consumespell { get; set; }
 
         [JsonPropertyName("craftingrequirements")]
-        public HideoutitemCraftingrequirements Craftingrequirements { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Craftingrequirements>))]
+        public List<Craftingrequirements>? Craftingrequirements { get; set; }
 
         [JsonPropertyName("upgraderequirements")]
         public Upgraderequirements Upgraderequirements { get; set; }

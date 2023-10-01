@@ -27,7 +27,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Durabilitylossperdayfactor { get; set; }
 
         [JsonPropertyName("@weight")]
-        public string Weight { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Weight { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@unlockedtocraft")]
@@ -64,7 +65,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("craftingrequirements")]
-        public FurnitureitemCraftingrequirements? Craftingrequirements { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Craftingrequirements>))]
+        public List<Craftingrequirements>? Craftingrequirements { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("AudioInfo")]

@@ -19,7 +19,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Tier { get; set; }
 
         [JsonPropertyName("@weight")]
-        public string Weight { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Weight { get; set; }
 
         [JsonPropertyName("@durability")]
         [JsonConverter(typeof(StringToLongConverter))]
@@ -63,6 +64,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Hidefromplayeroncontext { get; set; }
 
         [JsonPropertyName("craftingrequirements")]
-        public KilltrophyCraftingrequirements Craftingrequirements { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Craftingrequirements>))]
+        public List<Craftingrequirements>? Craftingrequirements { get; set; }
     }
 }

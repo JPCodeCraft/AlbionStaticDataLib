@@ -29,7 +29,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Resourcetype { get; set; }
 
         [JsonPropertyName("@weight")]
-        public string Weight { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Weight { get; set; }
 
         [JsonPropertyName("@maxstacksize")]
         [JsonConverter(typeof(StringToLongConverter))]
@@ -65,7 +66,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public bool Canbestoredinbattlevault { get; set; }
 
         [JsonPropertyName("craftingrequirements")]
-        public CrystalleagueitemCraftingrequirements Craftingrequirements { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Craftingrequirements>))]
+        public List<Craftingrequirements>? Craftingrequirements { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@uispriteoverlay1")]

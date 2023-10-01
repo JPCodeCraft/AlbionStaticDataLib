@@ -37,8 +37,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Maxstacksize { get; set; }
 
         [JsonPropertyName("@weight")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long Weight { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Weight { get; set; }
 
         [JsonPropertyName("@unlockedtocraft")]
         [JsonConverter(typeof(FluffyParseStringConverter))]
@@ -57,6 +57,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Uicraftsoundfinish { get; set; }
 
         [JsonPropertyName("craftingrequirements")]
-        public HideoutitemCraftingrequirements Craftingrequirements { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Craftingrequirements>))]
+        public List<Craftingrequirements>? Craftingrequirements { get; set; }
     }
 }

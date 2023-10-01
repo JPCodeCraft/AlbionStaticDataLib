@@ -1,7 +1,4 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Shared;
-
-namespace AlbionStaticDataLib.Input.Items.Models
+﻿namespace AlbionStaticDataLib.Input.Items.Models
 
 {
     public class PurpleEnchantment
@@ -22,7 +19,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Consumespell { get; set; }
 
         [JsonPropertyName("craftingrequirements")]
-        public FluffyCraftingrequirements Craftingrequirements { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Craftingrequirements>))]
+        public List<Craftingrequirements>? Craftingrequirements { get; set; }
 
         [JsonPropertyName("upgraderequirements")]
         public Upgraderequirements Upgraderequirements { get; set; }
@@ -32,8 +30,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         [JsonConverter(typeof(StringToLongConverter))]
         public long? Nutrition { get; set; }
 
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@weight")]
-        public string Weight { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Weight { get; set; }
     }
 }

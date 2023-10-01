@@ -1,7 +1,4 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Shared;
-
-namespace AlbionStaticDataLib.Input.Items.Models
+﻿namespace AlbionStaticDataLib.Input.Items.Models
 
 {
     public class LootElement
@@ -16,8 +13,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long? Itemamount { get; set; }
 
         [JsonPropertyName("@weight")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long Weight { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Weight { get; set; }
 
         [JsonPropertyName("@labourerfame")]
         [JsonConverter(typeof(StringToLongConverter))]

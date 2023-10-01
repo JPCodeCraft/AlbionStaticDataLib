@@ -1,6 +1,4 @@
 ﻿using AlbionStaticDataLib.Input.Items.Enums;
-using AlbionStaticDataLib.Input.Shared;
-using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -32,7 +30,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public ShopsubcategoryName Shopsubcategory1 { get; set; }
 
         [JsonPropertyName("@weight")]
-        public string Weight { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Weight { get; set; }
 
         [JsonPropertyName("@unlockedtocraft")]
         [JsonConverter(typeof(FluffyParseStringConverter))]
@@ -44,7 +43,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long? Fasttravelfactor { get; set; }
 
         [JsonPropertyName("craftingrequirements")]
-        public JournalitemCraftingrequirements Craftingrequirements { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Craftingrequirements>))]
+        public List<Craftingrequirements>? Craftingrequirements { get; set; }
 
         [JsonPropertyName("famefillingmissions")]
         public Famefillingmissions Famefillingmissions { get; set; }

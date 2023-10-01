@@ -23,6 +23,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public bool Unlockedtocraft { get; set; }
 
         [JsonPropertyName("@weight")]
-        public string Weight { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Weight { get; set; }
     }
 }

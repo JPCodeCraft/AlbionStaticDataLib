@@ -1,7 +1,4 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Shared;
-
-namespace AlbionStaticDataLib.Input.Items.Models
+﻿namespace AlbionStaticDataLib.Input.Items.Models
 
 {
     public class Container
@@ -11,6 +8,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Capacity { get; set; }
 
         [JsonPropertyName("@weightlimit")]
-        public string Weightlimit { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Weightlimit { get; set; }
     }
 }

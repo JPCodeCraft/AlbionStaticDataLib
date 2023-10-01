@@ -1,6 +1,4 @@
 ﻿using AlbionStaticDataLib.Input.Items.Enums;
-using AlbionStaticDataLib.Input.Shared;
-using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -44,7 +42,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public FarmableItemKind Kind { get; set; }
 
         [JsonPropertyName("@weight")]
-        public string Weight { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Weight { get; set; }
 
         [JsonPropertyName("@unlockedtocraft")]
         [JsonConverter(typeof(FluffyParseStringConverter))]
@@ -84,7 +83,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("craftingrequirements")]
-        public FarmableitemCraftingrequirements Craftingrequirements { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Craftingrequirements>))]
+        public List<Craftingrequirements>? Craftingrequirements { get; set; }
 
         [JsonPropertyName("AudioInfo")]
         public AudioInfo AudioInfo { get; set; }
