@@ -9,6 +9,6 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Prefab { get; set; }
 
         [JsonPropertyName("@impactsocket")]
-        public Socket Impactsocket { get; set; }
+        public string Impactsocket { get; set; }
     }
 }

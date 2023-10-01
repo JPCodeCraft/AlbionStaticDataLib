@@ -1,5 +1,5 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Items.Converters;
+﻿using AlbionStaticDataLib.Input.Items.Converters;
+using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -52,10 +52,10 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public Shop Shopsubcategory1 { get; set; }
 
         [JsonPropertyName("@uicraftsoundstart")]
-        public EquipmentitemUicraftsoundstart Uicraftsoundstart { get; set; }
+        public string Uicraftsoundstart { get; set; }
 
         [JsonPropertyName("@uicraftsoundfinish")]
-        public EquipmentitemUicraftsoundfinish Uicraftsoundfinish { get; set; }
+        public string Uicraftsoundfinish { get; set; }
 
         [JsonPropertyName("craftingrequirements")]
         public HideoutitemCraftingrequirements Craftingrequirements { get; set; }

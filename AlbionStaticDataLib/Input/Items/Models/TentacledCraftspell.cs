@@ -1,5 +1,5 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Items.Converters;
+﻿using AlbionStaticDataLib.Input.Items.Converters;
+using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -16,6 +16,6 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@tag")]
-        public Tag? Tag { get; set; }
+        public string? Tag { get; set; }
     }
 }

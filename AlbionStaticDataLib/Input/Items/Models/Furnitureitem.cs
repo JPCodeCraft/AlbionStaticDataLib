@@ -58,11 +58,11 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@uicraftsoundstart")]
-        public FurnitureitemUicraftsoundstart? Uicraftsoundstart { get; set; }
+        public string? Uicraftsoundstart { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@uicraftsoundfinish")]
-        public FurnitureitemUicraftsoundfinish? Uicraftsoundfinish { get; set; }
+        public string? Uicraftsoundfinish { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("craftingrequirements")]

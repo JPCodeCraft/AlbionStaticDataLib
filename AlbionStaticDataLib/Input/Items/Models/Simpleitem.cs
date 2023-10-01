@@ -115,7 +115,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@uispriteoverlay1")]
-        public Uispriteoverlay? Uispriteoverlay1 { get; set; }
+        public string? Uispriteoverlay1 { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@tradable")]
@@ -132,11 +132,11 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@uicraftsoundstart")]
-        public FurnitureitemUicraftsoundstart? Uicraftsoundstart { get; set; }
+        public string? Uicraftsoundstart { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@uicraftsoundfinish")]
-        public FurnitureitemUicraftsoundfinish? Uicraftsoundfinish { get; set; }
+        public string? Uicraftsoundfinish { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@craftingcategory")]

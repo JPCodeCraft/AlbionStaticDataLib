@@ -1,6 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Items.Converters;
+﻿using AlbionStaticDataLib.Input.Items.Converters;
 using AlbionStaticDataLib.Input.Items.Enums;
+using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -111,10 +111,10 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public bool? Unequipincombat { get; set; }
 
         [JsonPropertyName("@uicraftsoundstart")]
-        public EquipmentitemUicraftsoundstart Uicraftsoundstart { get; set; }
+        public string Uicraftsoundstart { get; set; }
 
         [JsonPropertyName("@uicraftsoundfinish")]
-        public EquipmentitemUicraftsoundfinish Uicraftsoundfinish { get; set; }
+        public string Uicraftsoundfinish { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@canbeovercharged")]
@@ -143,7 +143,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@descriptionlocatag")]
-        public WeaponDescriptionlocatag? Descriptionlocatag { get; set; }
+        public string? Descriptionlocatag { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("craftingspelllist")]

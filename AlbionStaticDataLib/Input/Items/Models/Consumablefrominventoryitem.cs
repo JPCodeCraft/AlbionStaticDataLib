@@ -68,7 +68,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@uispriteoverlay1")]
-        public Uispriteoverlay? Uispriteoverlay1 { get; set; }
+        public string? Uispriteoverlay1 { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@itemvalue")]
@@ -119,7 +119,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@uispriteoverlay2")]
-        public Uispriteoverlay? Uispriteoverlay2 { get; set; }
+        public string? Uispriteoverlay2 { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@decayitem")]

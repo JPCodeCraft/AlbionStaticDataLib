@@ -1,5 +1,5 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Items.Converters;
+﻿using AlbionStaticDataLib.Input.Items.Converters;
+using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -10,10 +10,10 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Prefab { get; set; }
 
         [JsonPropertyName("@startsocket")]
-        public Startsocket Startsocket { get; set; }
+        public string Startsocket { get; set; }
 
         [JsonPropertyName("@hitsocket")]
-        public Socket Hitsocket { get; set; }
+        public string Hitsocket { get; set; }
 
         [JsonPropertyName("@flyspeed")]
         [JsonConverter(typeof(StringToLongConverter))]

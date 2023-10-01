@@ -9,6 +9,6 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Uniquename { get; set; }
 
         [JsonPropertyName("@spellslot")]
-        public Spellslot Spellslot { get; set; }
+        public string Spellslot { get; set; }
     }
 }

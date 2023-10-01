@@ -146,10 +146,10 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Remounttime { get; set; }
 
         [JsonPropertyName("@uicraftsoundstart")]
-        public MountUicraftsoundstart Uicraftsoundstart { get; set; }
+        public string Uicraftsoundstart { get; set; }
 
         [JsonPropertyName("@uicraftsoundfinish")]
-        public MountUicraftsoundfinish Uicraftsoundfinish { get; set; }
+        public string Uicraftsoundfinish { get; set; }
 
         [JsonPropertyName("@dismountbuff")]
         public string Dismountbuff { get; set; }

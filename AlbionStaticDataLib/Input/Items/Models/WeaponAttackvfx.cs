@@ -6,9 +6,9 @@ namespace AlbionStaticDataLib.Input.Items.Models
     public class WeaponAttackvfx
     {
         [JsonPropertyName("@prefab")]
-        public Prefab Prefab { get; set; }
+        public string Prefab { get; set; }
 
         [JsonPropertyName("@target")]
-        public Target Target { get; set; }
+        public string Target { get; set; }
     }
 }

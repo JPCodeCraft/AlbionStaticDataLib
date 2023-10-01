@@ -1,65 +1,64 @@
-﻿using System.Text.Json;
+﻿using AlbionStaticDataLib.Input.Items.Enums;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace AlbionStaticDataLib.Input.Items.Models
+namespace AlbionStaticDataLib.Input.Items.Converters
 
 {
-    internal class UniquenameConverter : JsonConverter<Uniquename>
+    internal class CurrencynameConverter : JsonConverter<CurrencyName>
     {
-        public override bool CanConvert(Type t) => t == typeof(Uniquename);
-
-        public override Uniquename Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        public override CurrencyName Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             var value = reader.GetString();
             switch (value)
             {
                 case "FACTION_CAERLEON":
-                    return Uniquename.FactionCaerleon;
+                    return CurrencyName.FactionCaerleon;
                 case "FACTION_FOREST":
-                    return Uniquename.FactionForest;
+                    return CurrencyName.FactionForest;
                 case "FACTION_HIGHLAND":
-                    return Uniquename.FactionHighland;
+                    return CurrencyName.FactionHighland;
                 case "FACTION_MOUNTAIN":
-                    return Uniquename.FactionMountain;
+                    return CurrencyName.FactionMountain;
                 case "FACTION_STEPPE":
-                    return Uniquename.FactionSteppe;
+                    return CurrencyName.FactionSteppe;
                 case "FACTION_SWAMP":
-                    return Uniquename.FactionSwamp;
+                    return CurrencyName.FactionSwamp;
                 case "FAVOR":
-                    return Uniquename.Favor;
+                    return CurrencyName.Favor;
             }
             throw new Exception("Cannot unmarshal type Uniquename");
         }
 
-        public override void Write(Utf8JsonWriter writer, Uniquename value, JsonSerializerOptions options)
+        public override void Write(Utf8JsonWriter writer, CurrencyName value, JsonSerializerOptions options)
         {
             switch (value)
             {
-                case Uniquename.FactionCaerleon:
+                case CurrencyName.FactionCaerleon:
                     JsonSerializer.Serialize(writer, "FACTION_CAERLEON", options);
                     return;
-                case Uniquename.FactionForest:
+                case CurrencyName.FactionForest:
                     JsonSerializer.Serialize(writer, "FACTION_FOREST", options);
                     return;
-                case Uniquename.FactionHighland:
+                case CurrencyName.FactionHighland:
                     JsonSerializer.Serialize(writer, "FACTION_HIGHLAND", options);
                     return;
-                case Uniquename.FactionMountain:
+                case CurrencyName.FactionMountain:
                     JsonSerializer.Serialize(writer, "FACTION_MOUNTAIN", options);
                     return;
-                case Uniquename.FactionSteppe:
+                case CurrencyName.FactionSteppe:
                     JsonSerializer.Serialize(writer, "FACTION_STEPPE", options);
                     return;
-                case Uniquename.FactionSwamp:
+                case CurrencyName.FactionSwamp:
                     JsonSerializer.Serialize(writer, "FACTION_SWAMP", options);
                     return;
-                case Uniquename.Favor:
+                case CurrencyName.Favor:
                     JsonSerializer.Serialize(writer, "FAVOR", options);
                     return;
             }
             throw new Exception("Cannot marshal type Uniquename");
         }
 
-        public static readonly UniquenameConverter Singleton = new UniquenameConverter();
+        public static readonly CurrencynameConverter Singleton = new CurrencynameConverter();
     }
 }

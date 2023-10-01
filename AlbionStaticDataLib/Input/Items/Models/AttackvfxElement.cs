@@ -6,19 +6,19 @@ namespace AlbionStaticDataLib.Input.Items.Models
     public class AttackvfxElement
     {
         [JsonPropertyName("@prefab")]
-        public Prefab Prefab { get; set; }
+        public string Prefab { get; set; }
 
         [JsonPropertyName("@socket")]
-        public Socket Socket { get; set; }
+        public string Socket { get; set; }
 
         [JsonPropertyName("@constraintpreset")]
         public string Constraintpreset { get; set; }
 
         [JsonPropertyName("@target")]
-        public Target Target { get; set; }
+        public string Target { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@visibility")]
-        public Visibility? Visibility { get; set; }
+        public string? Visibility { get; set; }
     }
 }

@@ -42,7 +42,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Abilitypower { get; set; }
 
         [JsonPropertyName("@slottype")]
-        public SlottypeEnum Slottype { get; set; }
+        public Slottype Slottype { get; set; }
 
         [JsonPropertyName("@consumespell")]
         public string Consumespell { get; set; }
@@ -93,7 +93,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@craftingcategory")]
-        public SlottypeEnum? Craftingcategory { get; set; }
+        public Slottype? Craftingcategory { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("craftingrequirements")]
@@ -110,7 +110,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@uispriteoverlay1")]
-        public Uispriteoverlay? Uispriteoverlay1 { get; set; }
+        public string? Uispriteoverlay1 { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@tradable")]
