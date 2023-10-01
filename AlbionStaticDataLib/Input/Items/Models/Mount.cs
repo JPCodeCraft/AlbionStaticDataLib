@@ -1,6 +1,6 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Items.Converters;
+﻿using AlbionStaticDataLib.Input.Items.Converters;
 using AlbionStaticDataLib.Input.Items.Enums;
+using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -117,7 +117,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Prefabscaling { get; set; }
 
         [JsonPropertyName("@despawneffect")]
-        public Despawneffect Despawneffect { get; set; }
+        public string Despawneffect { get; set; }
 
         [JsonPropertyName("@despawneffectscaling")]
         [JsonConverter(typeof(StringToLongConverter))]
@@ -152,7 +152,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public MountUicraftsoundfinish Uicraftsoundfinish { get; set; }
 
         [JsonPropertyName("@dismountbuff")]
-        public Dismountbuff Dismountbuff { get; set; }
+        public string Dismountbuff { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@forceddismountbuff")]

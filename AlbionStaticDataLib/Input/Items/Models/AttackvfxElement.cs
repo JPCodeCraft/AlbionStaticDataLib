@@ -12,7 +12,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public Socket Socket { get; set; }
 
         [JsonPropertyName("@constraintpreset")]
-        public Constraintpreset Constraintpreset { get; set; }
+        public string Constraintpreset { get; set; }
 
         [JsonPropertyName("@target")]
         public Target Target { get; set; }
