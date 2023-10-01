@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using AlbionStaticDataLib.Input.Items.Converters;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -18,7 +19,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public Despawneffect Despawneffect { get; set; }
 
         [JsonPropertyName("@despawneffectscaling")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Despawneffectscaling { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -45,7 +46,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@nametagoffset")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Nametagoffset { get; set; }
     }
 }

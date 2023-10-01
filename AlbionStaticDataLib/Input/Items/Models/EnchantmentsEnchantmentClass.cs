@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using AlbionStaticDataLib.Input.Items.Converters;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -6,15 +7,15 @@ namespace AlbionStaticDataLib.Input.Items.Models
     public class EnchantmentsEnchantmentClass
     {
         [JsonPropertyName("@enchantmentlevel")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Enchantmentlevel { get; set; }
 
         [JsonPropertyName("@itempower")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Itempower { get; set; }
 
         [JsonPropertyName("@durability")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Durability { get; set; }
 
         [JsonPropertyName("craftingrequirements")]

@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using AlbionStaticDataLib.Input.Items.Converters;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -6,7 +7,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
     public class Food
     {
         [JsonPropertyName("@nutritionmax")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Nutritionmax { get; set; }
 
         [JsonPropertyName("@secondspernutrition")]
@@ -17,7 +18,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@lossbeforehungry")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Lossbeforehungry { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using AlbionStaticDataLib.Input.Items.Converters;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -6,11 +7,11 @@ namespace AlbionStaticDataLib.Input.Items.Models
     public class Repairkit
     {
         [JsonPropertyName("@repaircostfactor")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Repaircostfactor { get; set; }
 
         [JsonPropertyName("@maxtier")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Maxtier { get; set; }
     }
 }

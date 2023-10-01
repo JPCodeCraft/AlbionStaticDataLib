@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using AlbionStaticDataLib.Input.Items.Converters;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -9,7 +10,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Uniquename { get; set; }
 
         [JsonPropertyName("@count")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Count { get; set; }
     }
 }

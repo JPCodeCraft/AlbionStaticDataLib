@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using AlbionStaticDataLib.Input.Shared;
 
 namespace AlbionStaticDataLib.Input.Resources.Models
 {
@@ -9,7 +10,7 @@ namespace AlbionStaticDataLib.Input.Resources.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@resource")]
-        public ResourceEnum? Resource { get; set; }
+        public ResourceTypeEnum? Resource { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("ToolModifier")]

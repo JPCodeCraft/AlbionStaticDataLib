@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using AlbionStaticDataLib.Input.Items.Converters;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -6,7 +7,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
     public class Product
     {
         [JsonPropertyName("@productiontime")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Productiontime { get; set; }
 
         [JsonPropertyName("@actionname")]
@@ -16,11 +17,11 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Lootlist { get; set; }
 
         [JsonPropertyName("@lootchance")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Lootchance { get; set; }
 
         [JsonPropertyName("@fame")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Fame { get; set; }
     }
 }

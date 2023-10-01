@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using AlbionStaticDataLib.Input.Items.Converters;
 using AlbionStaticDataLib.Input.Items.Enums;
 
 namespace AlbionStaticDataLib.Input.Items.Models
@@ -16,14 +17,14 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Shopsubcategory1 { get; set; }
 
         [JsonPropertyName("@tier")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Tier { get; set; }
 
         [JsonPropertyName("@weight")]
         public string Weight { get; set; }
 
         [JsonPropertyName("@durability")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Durability { get; set; }
 
         [JsonPropertyName("@unlockedtocraft")]

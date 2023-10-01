@@ -1,4 +1,5 @@
-﻿using AlbionStaticDataLib.Input.Items.Enums;
+﻿using AlbionStaticDataLib.Input.Items.Converters;
+using AlbionStaticDataLib.Input.Items.Enums;
 using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models
@@ -14,11 +15,11 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Uniquename { get; set; }
 
         [JsonPropertyName("@tier")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Tier { get; set; }
 
         [JsonPropertyName("@maxfame")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Maxfame { get; set; }
 
         [JsonPropertyName("@baselootamount")]
@@ -39,7 +40,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@fasttravelfactor")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Fasttravelfactor { get; set; }
 
         [JsonPropertyName("craftingrequirements")]

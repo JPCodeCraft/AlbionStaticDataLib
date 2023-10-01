@@ -9,7 +9,6 @@ namespace AlbionStaticDataLib.Input.Resources.Converters
         {
             Converters =
             {
-                ResourceEnumConverter.Singleton,
                 TierUnionConverter.Singleton,
                 TilepremiumConverter.Singleton,
                 new DateOnlyConverter(),

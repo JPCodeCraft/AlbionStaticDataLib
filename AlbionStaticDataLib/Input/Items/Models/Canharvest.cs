@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using AlbionStaticDataLib.Input.Shared;
+using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -6,6 +7,6 @@ namespace AlbionStaticDataLib.Input.Items.Models
     public class Canharvest
     {
         [JsonPropertyName("@resourcetype")]
-        public CanharvestResourcetype Resourcetype { get; set; }
+        public ResourceTypeEnum Resourcetype { get; set; }
     }
 }

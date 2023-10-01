@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using AlbionStaticDataLib.Input.Items.Converters;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -6,11 +7,11 @@ namespace AlbionStaticDataLib.Input.Items.Models
     public class FluffyCraftingrequirements
     {
         [JsonPropertyName("@amountcrafted")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Amountcrafted { get; set; }
 
         [JsonPropertyName("@craftingfocus")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Craftingfocus { get; set; }
 
         [JsonPropertyName("@time")]

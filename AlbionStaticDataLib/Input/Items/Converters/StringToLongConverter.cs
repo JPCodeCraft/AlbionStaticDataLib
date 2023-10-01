@@ -1,18 +1,16 @@
 ﻿using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace AlbionStaticDataLib.Input.Items.Models
+namespace AlbionStaticDataLib.Input.Items.Converters
 
 {
-    internal class PurpleParseStringConverter : JsonConverter<long>
+    internal class StringToLongConverter : JsonConverter<long>
     {
-        public override bool CanConvert(Type t) => t == typeof(long);
-
         public override long Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
         {
             var value = reader.GetString();
             long l;
-            if (Int64.TryParse(value, out l))
+            if (long.TryParse(value, out l))
             {
                 return l;
             }
@@ -24,7 +22,5 @@ namespace AlbionStaticDataLib.Input.Items.Models
             JsonSerializer.Serialize(writer, value.ToString(), options);
             return;
         }
-
-        public static readonly PurpleParseStringConverter Singleton = new PurpleParseStringConverter();
     }
 }

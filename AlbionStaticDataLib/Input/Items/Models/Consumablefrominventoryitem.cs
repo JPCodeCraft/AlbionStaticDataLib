@@ -1,5 +1,6 @@
-﻿using System.Text.Json.Serialization;
+﻿using AlbionStaticDataLib.Input.Items.Converters;
 using AlbionStaticDataLib.Input.Items.Enums;
+using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -19,7 +20,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Uisprite { get; set; }
 
         [JsonPropertyName("@abilitypower")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Abilitypower { get; set; }
 
         [JsonPropertyName("@consumespell")]
@@ -32,7 +33,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public Shop Shopsubcategory1 { get; set; }
 
         [JsonPropertyName("@tier")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Tier { get; set; }
 
         [JsonPropertyName("@weight")]
@@ -40,12 +41,12 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@dummyitempower")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Dummyitempower { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@maxstacksize")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Maxstacksize { get; set; }
 
         [JsonPropertyName("@unlockedtocraft")]
@@ -71,7 +72,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@itemvalue")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Itemvalue { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -90,12 +91,12 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@estimatedmarketvalueoverride")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Estimatedmarketvalueoverride { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@enchantmentlevel")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Enchantmentlevel { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

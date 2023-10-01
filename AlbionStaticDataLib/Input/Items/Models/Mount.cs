@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using AlbionStaticDataLib.Input.Items.Converters;
 using AlbionStaticDataLib.Input.Items.Enums;
 
 namespace AlbionStaticDataLib.Input.Items.Models
@@ -14,15 +15,15 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Mountcategory { get; set; }
 
         [JsonPropertyName("@maxqualitylevel")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Maxqualitylevel { get; set; }
 
         [JsonPropertyName("@itempower")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Itempower { get; set; }
 
         [JsonPropertyName("@abilitypower")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Abilitypower { get; set; }
 
         [JsonPropertyName("@slottype")]
@@ -41,49 +42,49 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Halfmountedbuff { get; set; }
 
         [JsonPropertyName("@tier")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Tier { get; set; }
 
         [JsonPropertyName("@weight")]
         public string Weight { get; set; }
 
         [JsonPropertyName("@activespellslots")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Activespellslots { get; set; }
 
         [JsonPropertyName("@passivespellslots")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Passivespellslots { get; set; }
 
         [JsonPropertyName("@durability")]
         public string Durability { get; set; }
 
         [JsonPropertyName("@durabilityloss_attack")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long DurabilitylossAttack { get; set; }
 
         [JsonPropertyName("@durabilityloss_spelluse")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long DurabilitylossSpelluse { get; set; }
 
         [JsonPropertyName("@durabilityloss_receivedattack")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long DurabilitylossReceivedattack { get; set; }
 
         [JsonPropertyName("@durabilityloss_receivedspell")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long DurabilitylossReceivedspell { get; set; }
 
         [JsonPropertyName("@durabilityloss_receivedattack_mounted")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long DurabilitylossReceivedattackMounted { get; set; }
 
         [JsonPropertyName("@durabilityloss_receivedspell_mounted")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long DurabilitylossReceivedspellMounted { get; set; }
 
         [JsonPropertyName("@durabilityloss_mounting")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long DurabilitylossMounting { get; set; }
 
         [JsonPropertyName("@unlockedtocraft")]
@@ -95,15 +96,15 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public bool Unlockedtoequip { get; set; }
 
         [JsonPropertyName("@mounttime")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Mounttime { get; set; }
 
         [JsonPropertyName("@dismounttime")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Dismounttime { get; set; }
 
         [JsonPropertyName("@mounthitpointsmax")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Mounthitpointsmax { get; set; }
 
         [JsonPropertyName("@mounthitpointsregeneration")]
@@ -119,26 +120,26 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public Despawneffect Despawneffect { get; set; }
 
         [JsonPropertyName("@despawneffectscaling")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Despawneffectscaling { get; set; }
 
         [JsonPropertyName("@remountdistance")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Remountdistance { get; set; }
 
         [JsonPropertyName("@halfmountrange")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Halfmountrange { get; set; }
 
         [JsonPropertyName("@forceddismountcooldown")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Forceddismountcooldown { get; set; }
 
         [JsonPropertyName("@forceddismountspellcooldown")]
         public string Forceddismountspellcooldown { get; set; }
 
         [JsonPropertyName("@fulldismountcooldown")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Fulldismountcooldown { get; set; }
 
         [JsonPropertyName("@remounttime")]
@@ -226,7 +227,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@enchantmentlevel")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Enchantmentlevel { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
@@ -236,7 +237,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@itemvalue")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long? Itemvalue { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

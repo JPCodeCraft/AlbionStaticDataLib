@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using AlbionStaticDataLib.Input.Items.Converters;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -6,11 +7,11 @@ namespace AlbionStaticDataLib.Input.Items.Models
     public class KilltrophyCraftingrequirements
     {
         [JsonPropertyName("@gold")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Gold { get; set; }
 
         [JsonPropertyName("@time")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Time { get; set; }
     }
 }

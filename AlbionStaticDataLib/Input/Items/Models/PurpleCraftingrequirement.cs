@@ -1,4 +1,5 @@
-﻿using System.Text.Json.Serialization;
+﻿using AlbionStaticDataLib.Input.Items.Converters;
+using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -6,11 +7,11 @@ namespace AlbionStaticDataLib.Input.Items.Models
     public class PurpleCraftingrequirement
     {
         [JsonPropertyName("@silver")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Silver { get; set; }
 
         [JsonPropertyName("@time")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Time { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]

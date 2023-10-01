@@ -1,4 +1,5 @@
-﻿using AlbionStaticDataLib.Input.Items.Enums;
+﻿using AlbionStaticDataLib.Input.Items.Converters;
+using AlbionStaticDataLib.Input.Items.Enums;
 using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models
@@ -19,28 +20,28 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public ShopsubcategoryName Shopsubcategory1 { get; set; }
 
         [JsonPropertyName("@tier")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Tier { get; set; }
 
         [JsonPropertyName("@enchantmentlevel")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Enchantmentlevel { get; set; }
 
         [JsonPropertyName("@resourcetype")]
-        public CrystalleagueitemResourcetype Resourcetype { get; set; }
+        public string Resourcetype { get; set; }
 
         [JsonPropertyName("@weight")]
         public string Weight { get; set; }
 
         [JsonPropertyName("@maxstacksize")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Maxstacksize { get; set; }
 
         [JsonPropertyName("@namelocatag")]
         public Namelocatag Namelocatag { get; set; }
 
         [JsonPropertyName("@descriptionlocatag")]
-        public CrystalleagueitemDescriptionlocatag Descriptionlocatag { get; set; }
+        public string Descriptionlocatag { get; set; }
 
         [JsonPropertyName("@descvariable0")]
         public string Descvariable0 { get; set; }
@@ -50,7 +51,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public bool Salvageable { get; set; }
 
         [JsonPropertyName("@itemvalue")]
-        [JsonConverter(typeof(PurpleParseStringConverter))]
+        [JsonConverter(typeof(StringToLongConverter))]
         public long Itemvalue { get; set; }
 
         [JsonPropertyName("@tradable")]
