@@ -6,4 +6,25 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Input\Items\Models\ConsumablefrominventoryitemShopcategory.cs" />
+    <Compile Remove="Input\Items\Models\ConsumablefrominventoryitemShopcategoryConverter.cs" />
+    <Compile Remove="Input\Items\Models\CrystalleagueitemShopcategory.cs" />
+    <Compile Remove="Input\Items\Models\CrystalleagueitemShopcategoryConverter.cs" />
+    <Compile Remove="Input\Items\Models\EquipmentitemShopcategory.cs" />
+    <Compile Remove="Input\Items\Models\EquipmentitemShopcategoryConverter.cs" />
+    <Compile Remove="Input\Items\Models\FarmableitemShopcategory.cs" />
+    <Compile Remove="Input\Items\Models\FarmableitemShopcategoryConverter.cs" />
+    <Compile Remove="Input\Items\Models\FurnitureitemShopcategory.cs" />
+    <Compile Remove="Input\Items\Models\FurnitureitemShopcategoryConverter.cs" />
+    <Compile Remove="Input\Items\Models\LabourercontractShopcategory.cs" />
+    <Compile Remove="Input\Items\Models\LabourercontractShopcategoryConverter.cs" />
+    <Compile Remove="Input\Items\Models\MountShopcategory.cs" />
+    <Compile Remove="Input\Items\Models\MountShopcategoryConverter.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Input\Items\Converters\" />
+  </ItemGroup>
+
 </Project>

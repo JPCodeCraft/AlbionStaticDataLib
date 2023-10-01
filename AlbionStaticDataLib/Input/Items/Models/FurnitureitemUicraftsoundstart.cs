@@ -1,0 +1,5 @@
+﻿namespace AlbionStaticDataLib.Input.Items.Models
+
+{
+    public enum FurnitureitemUicraftsoundstart { PlayUiActionCraftFlourStart, PlayUiActionCraftFoodFirmStart, PlayUiActionCraftFoodFryStart, PlayUiActionCraftFoodLiquidStart, PlayUiActionCraftMeatStart, PlayUiActionCraftRefineFiberStart, PlayUiActionCraftRefineHideStart, PlayUiActionCraftRefineOreStart, PlayUiActionCraftRefineStoneStart, PlayUiActionCraftRefineWoodStart };
+}

@@ -1,4 +1,5 @@
-﻿using AlbionStaticDataLib.Input.Localization.Models;
+﻿using AlbionStaticDataLib.Input.Localization.Converters;
+using AlbionStaticDataLib.Input.Localization.Models;
 using System.Text.Json;
 
 namespace AlbionStaticDataLib.Tests.Input.Localization.Models
@@ -11,7 +12,7 @@ namespace AlbionStaticDataLib.Tests.Input.Localization.Models
         {
             using HttpClient client = new HttpClient();
             string json = await client.GetStringAsync(JsonUrl.Localization);
-            ItemLocalization[] items = JsonSerializer.Deserialize<ItemLocalization[]>(json);
+            LocalizationItem[] items = JsonSerializer.Deserialize<LocalizationItem[]>(json, LocalizationConverter.Settings);
             Assert.IsNotNull(items);
             Assert.IsTrue(items.Length > 0);
         }
