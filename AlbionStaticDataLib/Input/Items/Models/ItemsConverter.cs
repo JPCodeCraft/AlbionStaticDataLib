@@ -7,10 +7,8 @@
         {
             Converters =
             {
-                FacestateConverter.Singleton,
                 LootUnionConverter.Singleton,
                 MountspellUnionConverter.Singleton,
-                ProjectileUnionConverter.Singleton
             },
         };
     }

@@ -43,11 +43,13 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@attackspeed")]
-        public string Attackspeed { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Attackspeed { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@attackrange")]
-        public string Attackrange { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Attackrange { get; set; }
 
         [JsonPropertyName("@twohanded")]
         [JsonConverter(typeof(StringToBoolConverter))]
@@ -147,8 +149,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("craftingspelllist")]
-        [JsonConverter(typeof(SingleOrArrayConverter<Craftspell>))]
-        public List<Craftspell> Craftingspelllist { get; set; }
+        public Craftingspelllist? Craftingspelllist { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@attackbuildingdamage")]
@@ -188,7 +189,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@hitpointsregenerationbonus")]
-        public string Hitpointsregenerationbonus { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Hitpointsregenerationbonus { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@itempowerprogressiontype")]
@@ -196,7 +198,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@focusfireprotectionpenetration")]
-        public string Focusfireprotectionpenetration { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Focusfireprotectionpenetration { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@healmodifier")]
@@ -205,17 +208,18 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@masterymodifier")]
-        public string Masterymodifier { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Masterymodifier { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@physicalattackdamagebonus")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long? Physicalattackdamagebonus { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Physicalattackdamagebonus { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@magicattackdamagebonus")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long? Magicattackdamagebonus { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Magicattackdamagebonus { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("attackvariations")]
@@ -223,7 +227,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("projectile")]
-        public ProjectileUnion? Projectile { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<ProjectileElement>))]
+        public List<ProjectileElement>? Projectile { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@combatspecachievement")]
@@ -231,12 +236,12 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("enchantments")]
-        [JsonConverter(typeof(SingleOrArrayConverter<Enchantment>))]
-        public List<Enchantment>? Enchantments { get; set; }
+        public Enchantments? Enchantments { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@destinycraftfamefactor")]
-        public string Destinycraftfamefactor { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Destinycraftfamefactor { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@showinmarketplace")]
@@ -263,7 +268,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@attackdamagetimefactor")]
-        public string Attackdamagetimefactor { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Attackdamagetimefactor { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@mainhandanimationtype_attack")]
