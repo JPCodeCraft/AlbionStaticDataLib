@@ -1,4 +1,5 @@
 ﻿using System.Text.Json.Serialization;
+using AlbionStaticDataLib.Input.Shared.Converters;
 
 namespace AlbionStaticDataLib.Input.Localization.Models
 {

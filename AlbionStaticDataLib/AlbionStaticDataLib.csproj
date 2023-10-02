@@ -23,8 +23,4 @@
     <Compile Remove="Input\Items\Models\MountShopcategoryConverter.cs" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Input\Items\Converters\" />
-  </ItemGroup>
-
 </Project>

@@ -1,4 +1,6 @@
 ﻿using AlbionStaticDataLib.Input.Items.Enums;
+using AlbionStaticDataLib.Input.Shared.Converters;
+using AlbionStaticDataLib.Input.Shared.Enums;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -53,7 +55,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@resourcetype")]
-        public ResourceTypeEnum? Resourcetype { get; set; }
+        public ResourceType? Resourcetype { get; set; }
 
         [JsonPropertyName("@tier")]
         [JsonConverter(typeof(StringToIntConverter))]

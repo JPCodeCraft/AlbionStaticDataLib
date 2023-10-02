@@ -1,4 +1,4 @@
-﻿namespace AlbionStaticDataLib.Input.Shared
+﻿namespace AlbionStaticDataLib.Input.Shared.Converters
 {
     public class SingleOrArrayConverter<T> : JsonConverter<List<T>>
     {

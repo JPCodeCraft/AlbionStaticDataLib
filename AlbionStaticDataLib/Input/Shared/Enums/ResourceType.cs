@@ -1,7 +1,7 @@
-﻿namespace AlbionStaticDataLib.Input.Shared
+﻿namespace AlbionStaticDataLib.Input.Shared.Enums
 {
-    [JsonConverter(typeof(JsonStringEnumConverter<ResourceTypeEnum>))]
-    public enum ResourceTypeEnum
+    [JsonConverter(typeof(JsonStringEnumConverter<ResourceType>))]
+    public enum ResourceType
     {
         CROP, HERB, PRODUCTS, FISH, TOKEN, ARENA_TOKEN, OTHER, MEAT,
         WOOD, WOOD_LEVEL1, WOOD_LEVEL2, WOOD_LEVEL3, WOOD_LEVEL4,

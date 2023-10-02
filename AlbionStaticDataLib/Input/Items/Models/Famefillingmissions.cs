@@ -1,6 +1,4 @@
-﻿using System.Text.Json.Serialization;
-
-namespace AlbionStaticDataLib.Input.Items.Models
+﻿namespace AlbionStaticDataLib.Input.Items.Models
 
 {
     public class Famefillingmissions
@@ -15,14 +13,14 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("killmobfame")]
-        public Killmobfame Killmobfame { get; set; }
+        public Fame Killmobfame { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("fameearned")]
-        public Fameearned Fameearned { get; set; }
+        public Fame Fameearned { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("fishingfame")]
-        public Fameearned Fishingfame { get; set; }
+        public Fame Fishingfame { get; set; }
     }
 }

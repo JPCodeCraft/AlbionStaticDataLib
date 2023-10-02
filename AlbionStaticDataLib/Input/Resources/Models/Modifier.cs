@@ -1,4 +1,6 @@
-﻿namespace AlbionStaticDataLib.Input.Resources.Models
+﻿using AlbionStaticDataLib.Input.Shared.Converters;
+
+namespace AlbionStaticDataLib.Input.Resources.Models
 {
     public class Modifier
     {
@@ -7,6 +9,7 @@
         public int Tierdifference { get; set; }
 
         [JsonPropertyName("@timefactor")]
-        public string Timefactor { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Timefactor { get; set; }
     }
 }

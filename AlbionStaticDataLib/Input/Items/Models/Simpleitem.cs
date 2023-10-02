@@ -1,4 +1,6 @@
 ﻿using AlbionStaticDataLib.Input.Items.Enums;
+using AlbionStaticDataLib.Input.Shared.Converters;
+using AlbionStaticDataLib.Input.Shared.Enums;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -51,7 +53,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public Foodcategory? Foodcategory { get; set; }
 
         [JsonPropertyName("@resourcetype")]
-        public ResourceTypeEnum Resourcetype { get; set; }
+        public ResourceType Resourcetype { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@famevalue")]

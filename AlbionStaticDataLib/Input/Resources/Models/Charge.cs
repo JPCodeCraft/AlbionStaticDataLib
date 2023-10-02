@@ -1,5 +1,4 @@
-﻿using AlbionStaticDataLib.Input.Shared;
-using System.Text.Json.Serialization;
+﻿using AlbionStaticDataLib.Input.Shared.Converters;
 
 namespace AlbionStaticDataLib.Input.Resources.Models
 {
@@ -27,6 +26,7 @@ namespace AlbionStaticDataLib.Input.Resources.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@yield")]
-        public string Yield { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Yield { get; set; }
     }
 }

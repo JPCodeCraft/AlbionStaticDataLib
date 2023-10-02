@@ -1,4 +1,6 @@
-﻿namespace AlbionStaticDataLib.Input.Resources.Models
+﻿using AlbionStaticDataLib.Input.Shared.Converters;
+
+namespace AlbionStaticDataLib.Input.Resources.Models
 {
     public class ResourceTier
     {

@@ -1,4 +1,6 @@
 ﻿using AlbionStaticDataLib.Input.Items.Enums;
+using AlbionStaticDataLib.Input.Shared.Converters;
+using AlbionStaticDataLib.Input.Shared.Enums;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -26,7 +28,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public int Enchantmentlevel { get; set; }
 
         [JsonPropertyName("@resourcetype")]
-        public ResourceTypeEnum Resourcetype { get; set; }
+        public ResourceType Resourcetype { get; set; }
 
         [JsonPropertyName("@weight")]
         [JsonConverter(typeof(StringToDoubleConverter))]

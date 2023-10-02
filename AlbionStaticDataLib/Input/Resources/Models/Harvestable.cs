@@ -1,4 +1,7 @@
-﻿namespace AlbionStaticDataLib.Input.Resources.Models
+﻿using AlbionStaticDataLib.Input.Shared.Converters;
+using AlbionStaticDataLib.Input.Shared.Enums;
+
+namespace AlbionStaticDataLib.Input.Resources.Models
 {
     public class Harvestable
     {
@@ -7,7 +10,7 @@
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@resource")]
-        public ResourceTypeEnum? Resource { get; set; }
+        public ResourceType? Resource { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("ToolModifier")]

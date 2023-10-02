@@ -1,4 +1,4 @@
-﻿using AlbionStaticDataLib.Input.Shared;
+﻿using AlbionStaticDataLib.Input.Shared.Converters;
 using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Input.Items.Models

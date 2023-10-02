@@ -1,4 +1,6 @@
-﻿namespace AlbionStaticDataLib.Input.Items.Models
+﻿using AlbionStaticDataLib.Input.Shared.Converters;
+
+namespace AlbionStaticDataLib.Input.Items.Models
 
 {
     public class Upgraderequirements

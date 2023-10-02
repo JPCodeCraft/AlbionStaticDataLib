@@ -1,4 +1,5 @@
 ﻿using AlbionStaticDataLib.Input.Items.Enums;
+using AlbionStaticDataLib.Input.Shared.Converters;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -20,11 +21,13 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@durability")]
-        public string Durability { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Durability { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@durabilitylossperdayfactor")]
-        public string Durabilitylossperdayfactor { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Durabilitylossperdayfactor { get; set; }
 
         [JsonPropertyName("@weight")]
         [JsonConverter(typeof(StringToDoubleConverter))]
@@ -153,8 +156,9 @@ namespace AlbionStaticDataLib.Input.Items.Models
         [JsonPropertyName("@namelocatag")]
         public string Namelocatag { get; set; }
 
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("cheatprovider")]
-        public object Cheatprovider { get; set; }
+        public object? Cheatprovider { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@maxstacksize")]

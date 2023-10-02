@@ -1,4 +1,5 @@
 ﻿using AlbionStaticDataLib.Input.Items.Enums;
+using AlbionStaticDataLib.Input.Shared.Converters;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 

@@ -1,4 +1,5 @@
 ﻿using AlbionStaticDataLib.Input.Items.Enums;
+using AlbionStaticDataLib.Input.Shared.Converters;
 
 namespace AlbionStaticDataLib.Input.Items.Models
 
@@ -21,7 +22,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Maxfame { get; set; }
 
         [JsonPropertyName("@baselootamount")]
-        public string Baselootamount { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Baselootamount { get; set; }
 
         [JsonPropertyName("@shopcategory")]
         public ShopCategoryName Shopcategory { get; set; }

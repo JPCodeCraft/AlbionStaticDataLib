@@ -1,4 +1,6 @@
-﻿namespace AlbionStaticDataLib.Input.Resources.Models
+﻿using AlbionStaticDataLib.Input.Shared.Converters;
+
+namespace AlbionStaticDataLib.Input.Resources.Models
 {
     public class TierElement
     {
@@ -15,10 +17,12 @@
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@respawntimeseconds")]
-        public string Respawntimeseconds { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Respawntimeseconds { get; set; }
 
         [JsonPropertyName("@harvesttimeseconds")]
-        public string Harvesttimeseconds { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Harvesttimeseconds { get; set; }
 
         [JsonPropertyName("@requirestool")]
         [JsonConverter(typeof(StringToBoolConverter))]

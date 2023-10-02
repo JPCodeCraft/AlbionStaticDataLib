@@ -21,7 +21,7 @@ namespace AlbionStaticDataLib.Tests.Items.Models
 
             try
             {
-                ItemsRoot itemsRoot = JsonSerializer.Deserialize<ItemsRoot>(json, ItemsConverter.Settings);
+                ItemsRoot itemsRoot = JsonSerializer.Deserialize<ItemsRoot>(json);
                 Assert.IsNotNull(itemsRoot);
                 Assert.IsNotNull(itemsRoot.Items);
                 Assert.AreNotEqual(0, itemsRoot.Items.Weapon.Count);
