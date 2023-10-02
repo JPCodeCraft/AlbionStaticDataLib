@@ -38,7 +38,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@itemvalue")]
-        public string Itemvalue { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Itemvalue { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@nutrition")]
@@ -49,9 +50,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         [JsonPropertyName("@foodcategory")]
         public Foodcategory? Foodcategory { get; set; }
 
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@resourcetype")]
-        public string Resourcetype { get; set; }
+        public ResourceTypeEnum Resourcetype { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@famevalue")]

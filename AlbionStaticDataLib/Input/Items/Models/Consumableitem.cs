@@ -10,8 +10,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@itemvalue")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long? Itemvalue { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Itemvalue { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@fishingfame")]
@@ -53,7 +53,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@resourcetype")]
-        public ConsumableitemResourcetype? Resourcetype { get; set; }
+        public ResourceTypeEnum? Resourcetype { get; set; }
 
         [JsonPropertyName("@tier")]
         [JsonConverter(typeof(StringToLongConverter))]

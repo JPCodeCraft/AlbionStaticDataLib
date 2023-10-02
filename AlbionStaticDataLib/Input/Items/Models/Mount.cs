@@ -235,10 +235,9 @@ namespace AlbionStaticDataLib.Input.Items.Models
         [JsonConverter(typeof(StringToBoolConverter))]
         public bool? Canuseinfactionwarfare { get; set; }
 
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@itemvalue")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long? Itemvalue { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Itemvalue { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@descriptionlocatag")]

@@ -9,8 +9,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Uniquename { get; set; }
 
         [JsonPropertyName("@itemvalue")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long Itemvalue { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Itemvalue { get; set; }
 
         [JsonPropertyName("@tier")]
         [JsonConverter(typeof(StringToIntConverter))]

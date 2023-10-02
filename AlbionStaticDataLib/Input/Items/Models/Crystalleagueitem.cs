@@ -26,7 +26,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public int Enchantmentlevel { get; set; }
 
         [JsonPropertyName("@resourcetype")]
-        public string Resourcetype { get; set; }
+        public ResourceTypeEnum Resourcetype { get; set; }
 
         [JsonPropertyName("@weight")]
         [JsonConverter(typeof(StringToDoubleConverter))]
@@ -50,8 +50,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public bool Salvageable { get; set; }
 
         [JsonPropertyName("@itemvalue")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long Itemvalue { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Itemvalue { get; set; }
 
         [JsonPropertyName("@tradable")]
         [JsonConverter(typeof(StringToBoolConverter))]
