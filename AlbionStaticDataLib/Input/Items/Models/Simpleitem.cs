@@ -9,8 +9,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public string Uniquename { get; set; }
 
         [JsonPropertyName("@tier")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long Tier { get; set; }
+        [JsonConverter(typeof(StringToIntConverter))]
+        public int Tier { get; set; }
 
         [JsonPropertyName("@weight")]
         [JsonConverter(typeof(StringToDoubleConverter))]

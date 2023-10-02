@@ -1,13 +1,10 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Resources.Converters;
-
-namespace AlbionStaticDataLib.Input.Resources.Models
+﻿namespace AlbionStaticDataLib.Input.Resources.Models
 {
     public class TierElement
     {
         [JsonPropertyName("@tier")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long Tier { get; set; }
+        [JsonConverter(typeof(StringToIntConverter))]
+        public int Tier { get; set; }
 
         [JsonPropertyName("@item")]
         public string Item { get; set; }
