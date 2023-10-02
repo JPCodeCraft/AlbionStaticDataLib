@@ -7,7 +7,6 @@
         {
             Converters =
             {
-                EnchantmentUnionConverter.Singleton,
                 FacestateConverter.Singleton,
                 StickyCraftspellConverter.Singleton,
                 LootUnionConverter.Singleton,

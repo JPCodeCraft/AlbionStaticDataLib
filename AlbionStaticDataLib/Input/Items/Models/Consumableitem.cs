@@ -56,8 +56,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public ResourceTypeEnum? Resourcetype { get; set; }
 
         [JsonPropertyName("@tier")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long Tier { get; set; }
+        [JsonConverter(typeof(StringToIntConverter))]
+        public int Tier { get; set; }
 
         [JsonPropertyName("@weight")]
         [JsonConverter(typeof(StringToDoubleConverter))]
@@ -100,7 +100,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("enchantments")]
-        public ConsumableitemEnchantments Enchantments { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Enchantment>))]
+        public List<Enchantment>? Enchantments { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@famevalue")]

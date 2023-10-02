@@ -15,7 +15,7 @@ namespace AlbionStaticDataLib.Tests.Items.Models
             var jsonDocument = JsonDocument.Parse(json);
 
             List<string> a = new();
-            ExtractPropValues(jsonDocument.RootElement, a, "@resourcetype");
+            ExtractPropValues(jsonDocument.RootElement, a, "@slottype");
             HashSet<string> b = new(a);
             string result = string.Join(", ", b);
 

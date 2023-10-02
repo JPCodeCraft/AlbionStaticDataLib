@@ -230,7 +230,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("enchantments")]
-        public EquipmentitemEnchantments Enchantments { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Enchantment>))]
+        public List<Enchantment>? Enchantments { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@destinycraftfamefactor")]
