@@ -1,5 +1,5 @@
-﻿using AlbionStaticDataLib.Input.Resources.Models;
-using System.Text.Json;
+﻿using AlbionStaticDataLib.Json;
+using AlbionStaticDataLib.Json.Resources.Models;
 
 namespace AlbionStaticDataLib.Tests.Input.Resources.Models
 {
@@ -10,11 +10,9 @@ namespace AlbionStaticDataLib.Tests.Input.Resources.Models
         public async Task TestDeserialization()
         {
             using HttpClient client = new HttpClient();
-            string json = await client.GetStringAsync(JsonUrl.Resources);
 
-            ResourcesRoot resourcesRoot = JsonSerializer.Deserialize<ResourcesRoot>(json);
+            ResourcesRoot resourcesRoot = await new AlbionParser(client).GetResources(JsonUrl.Resources);
 
-            // Now you can perform various assertions to ensure the deserialization worked as expected
             Assert.IsNotNull(resourcesRoot);
             Assert.IsNotNull(resourcesRoot.AoResources);
             Assert.IsNotNull(resourcesRoot.AoResources.Resources);
