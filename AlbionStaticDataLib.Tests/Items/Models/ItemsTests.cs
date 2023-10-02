@@ -12,14 +12,12 @@ namespace AlbionStaticDataLib.Tests.Items.Models
             using HttpClient client = new HttpClient();
             string json = await client.GetStringAsync(JsonUrl.Items);
 
-            //var jsonDocument = JsonDocument.Parse(json);
+            var jsonDocument = JsonDocument.Parse(json);
 
-            //List<string> a = new();
-
-            //ExtractCraftingCategories(jsonDocument.RootElement, a);
-
-            //HashSet<string> b = new(a);
-            //string result = string.Join(", ", b);
+            List<string> a = new();
+            ExtractPropValues(jsonDocument.RootElement, a, "@foodcategory");
+            HashSet<string> b = new(a);
+            string result = string.Join(", ", b);
 
             try
             {
@@ -39,31 +37,31 @@ namespace AlbionStaticDataLib.Tests.Items.Models
 
         }
 
-        //static void ExtractCraftingCategories(JsonElement element, List<string> a)
-        //{
-        //    switch (element.ValueKind)
-        //    {
-        //        case JsonValueKind.Object:
-        //            foreach (JsonProperty property in element.EnumerateObject())
-        //            {
-        //                if (property.Name == "@craftingcategory")
-        //                {
-        //                    a.Add(property.Value.GetString());
-        //                }
-        //                else
-        //                {
-        //                    ExtractCraftingCategories(property.Value, a);
-        //                }
-        //            }
-        //            break;
+        static void ExtractPropValues(JsonElement element, List<string> a, string propName)
+        {
+            switch (element.ValueKind)
+            {
+                case JsonValueKind.Object:
+                    foreach (JsonProperty property in element.EnumerateObject())
+                    {
+                        if (property.Name == propName)
+                        {
+                            a.Add(property.Value.GetString());
+                        }
+                        else
+                        {
+                            ExtractPropValues(property.Value, a, propName);
+                        }
+                    }
+                    break;
 
-        //        case JsonValueKind.Array:
-        //            foreach (JsonElement arrayElement in element.EnumerateArray())
-        //            {
-        //                ExtractCraftingCategories(arrayElement, a);
-        //            }
-        //            break;
-        //    }
-        //}
+                case JsonValueKind.Array:
+                    foreach (JsonElement arrayElement in element.EnumerateArray())
+                    {
+                        ExtractPropValues(arrayElement, a, propName);
+                    }
+                    break;
+            }
+        }
     }
 }

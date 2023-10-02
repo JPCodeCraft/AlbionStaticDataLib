@@ -4,8 +4,8 @@
     public class EnchantmentsEnchantmentClass
     {
         [JsonPropertyName("@enchantmentlevel")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long Enchantmentlevel { get; set; }
+        [JsonConverter(typeof(StringToIntConverter))]
+        public int Enchantmentlevel { get; set; }
 
         [JsonPropertyName("@itempower")]
         [JsonConverter(typeof(StringToLongConverter))]

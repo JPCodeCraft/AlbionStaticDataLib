@@ -17,8 +17,8 @@
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@enchantmentlevel")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long? Enchantmentlevel { get; set; }
+        [JsonConverter(typeof(StringToIntConverter))]
+        public int? Enchantmentlevel { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@preservequality")]

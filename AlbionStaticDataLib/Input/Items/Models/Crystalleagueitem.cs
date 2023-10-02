@@ -22,8 +22,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Tier { get; set; }
 
         [JsonPropertyName("@enchantmentlevel")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long Enchantmentlevel { get; set; }
+        [JsonConverter(typeof(StringToIntConverter))]
+        public int Enchantmentlevel { get; set; }
 
         [JsonPropertyName("@resourcetype")]
         public string Resourcetype { get; set; }

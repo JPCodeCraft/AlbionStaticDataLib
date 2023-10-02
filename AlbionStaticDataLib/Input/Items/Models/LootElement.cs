@@ -22,8 +22,8 @@
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@itemenchantmentlevel")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long? Itemenchantmentlevel { get; set; }
+        [JsonConverter(typeof(StringToIntConverter))]
+        public int? Itemenchantmentlevel { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@silveramount")]
