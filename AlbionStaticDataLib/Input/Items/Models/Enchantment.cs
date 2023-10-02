@@ -35,8 +35,9 @@
         [JsonConverter(typeof(SingleOrArrayConverter<Craftingrequirements>))]
         public List<Craftingrequirements>? Craftingrequirements { get; set; }
 
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("upgraderequirements")]
-        public Upgraderequirements Upgraderequirements { get; set; }
+        public Upgraderequirements? Upgraderequirements { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@nutrition")]

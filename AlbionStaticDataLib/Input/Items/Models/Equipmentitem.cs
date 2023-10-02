@@ -231,8 +231,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("enchantments")]
-        [JsonConverter(typeof(SingleOrArrayConverter<Enchantment>))]
-        public List<Enchantment>? Enchantments { get; set; }
+        public Enchantments Enchantments { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@destinycraftfamefactor")]
@@ -250,8 +249,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("craftingspelllist")]
-        [JsonConverter(typeof(SingleOrArrayConverter<Craftspell>))]
-        public List<Craftspell> Craftingspelllist { get; set; }
+        public Craftingspelllist Craftingspelllist { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@descriptionlocatag")]

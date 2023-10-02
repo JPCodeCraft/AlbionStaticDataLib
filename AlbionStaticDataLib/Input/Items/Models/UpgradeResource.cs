@@ -1,7 +1,10 @@
-﻿namespace AlbionStaticDataLib.Input.Items.Models
+﻿using System.Text.Json.Serialization;
+using AlbionStaticDataLib.Input.Shared;
+
+namespace AlbionStaticDataLib.Input.Items.Models
 
 {
-    public class ReplacementitemElement
+    public class UpgradeResource
     {
         [JsonPropertyName("@uniquename")]
         public string Uniquename { get; set; }
