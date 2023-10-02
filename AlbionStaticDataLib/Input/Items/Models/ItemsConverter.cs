@@ -8,7 +8,6 @@
             Converters =
             {
                 LootUnionConverter.Singleton,
-                MountspellUnionConverter.Singleton,
             },
         };
     }

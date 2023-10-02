@@ -1,11 +1,11 @@
-﻿using System.Text.Json.Serialization;
-
-namespace AlbionStaticDataLib.Input.Items.Models
+﻿namespace AlbionStaticDataLib.Input.Items.Models
 
 {
     public class Mountspelllist
     {
+        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("mountspell")]
-        public MountspellUnion Mountspell { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<MountspellElement>))]
+        public List<MountspellElement>? Mountspells { get; set; }
     }
 }

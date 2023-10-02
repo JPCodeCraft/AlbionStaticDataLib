@@ -8,9 +8,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         [JsonPropertyName("@uniquename")]
         public string Uniquename { get; set; }
 
-        [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@mountcategory")]
-        public string Mountcategory { get; set; }
+        public MountCategory Mountcategory { get; set; }
 
         [JsonPropertyName("@maxqualitylevel")]
         [JsonConverter(typeof(StringToLongConverter))]
@@ -56,7 +55,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Passivespellslots { get; set; }
 
         [JsonPropertyName("@durability")]
-        public string Durability { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Durability { get; set; }
 
         [JsonPropertyName("@durabilityloss_attack")]
         [JsonConverter(typeof(StringToLongConverter))]
@@ -107,7 +107,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Mounthitpointsmax { get; set; }
 
         [JsonPropertyName("@mounthitpointsregeneration")]
-        public string Mounthitpointsregeneration { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Mounthitpointsregeneration { get; set; }
 
         [JsonPropertyName("@prefabname")]
         public string Prefabname { get; set; }
@@ -135,14 +136,16 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Forceddismountcooldown { get; set; }
 
         [JsonPropertyName("@forceddismountspellcooldown")]
-        public string Forceddismountspellcooldown { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Forceddismountspellcooldown { get; set; }
 
         [JsonPropertyName("@fulldismountcooldown")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long Fulldismountcooldown { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Fulldismountcooldown { get; set; }
 
         [JsonPropertyName("@remounttime")]
-        public string Remounttime { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Remounttime { get; set; }
 
         [JsonPropertyName("@uicraftsoundstart")]
         public string Uicraftsoundstart { get; set; }
@@ -183,8 +186,7 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("craftingspelllist")]
-        [JsonConverter(typeof(SingleOrArrayConverter<Craftspell>))]
-        public List<Craftspell> Craftingspelllist { get; set; }
+        public Craftingspelllist Craftingspelllist { get; set; }
 
         [JsonPropertyName("SocketPreset")]
         public AudioInfo SocketPreset { get; set; }

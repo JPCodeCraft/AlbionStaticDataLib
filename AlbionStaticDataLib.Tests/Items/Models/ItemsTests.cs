@@ -15,7 +15,7 @@ namespace AlbionStaticDataLib.Tests.Items.Models
             var jsonDocument = JsonDocument.Parse(json);
 
             List<string> a = new();
-            ExtractPropValues(jsonDocument.RootElement, a, "@facestate");
+            ExtractPropValues(jsonDocument.RootElement, a, "@mountcategory");
             HashSet<string> b = new(a);
             string result = string.Join(", ", b);
 
