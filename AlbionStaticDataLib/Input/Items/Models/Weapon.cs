@@ -147,7 +147,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("craftingspelllist")]
-        public WeaponCraftingspelllist Craftingspelllist { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Craftspell>))]
+        public List<Craftspell> Craftingspelllist { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@attackbuildingdamage")]

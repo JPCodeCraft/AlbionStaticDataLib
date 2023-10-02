@@ -1,5 +1,4 @@
-﻿using AlbionStaticDataLib.Input.Resources.Converters;
-using AlbionStaticDataLib.Input.Resources.Models;
+﻿using AlbionStaticDataLib.Input.Resources.Models;
 using System.Text.Json;
 
 namespace AlbionStaticDataLib.Tests.Input.Resources.Models
@@ -13,7 +12,7 @@ namespace AlbionStaticDataLib.Tests.Input.Resources.Models
             using HttpClient client = new HttpClient();
             string json = await client.GetStringAsync(JsonUrl.Resources);
 
-            ResourcesRoot resourcesRoot = JsonSerializer.Deserialize<ResourcesRoot>(json, ResourcesConverter.Settings);
+            ResourcesRoot resourcesRoot = JsonSerializer.Deserialize<ResourcesRoot>(json);
 
             // Now you can perform various assertions to ensure the deserialization worked as expected
             Assert.IsNotNull(resourcesRoot);

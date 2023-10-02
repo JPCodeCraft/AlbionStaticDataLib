@@ -183,7 +183,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("craftingspelllist")]
-        public EquipmentitemCraftingspelllist Craftingspelllist { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Craftspell>))]
+        public List<Craftspell> Craftingspelllist { get; set; }
 
         [JsonPropertyName("SocketPreset")]
         public AudioInfo SocketPreset { get; set; }

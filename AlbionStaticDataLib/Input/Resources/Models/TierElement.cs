@@ -57,7 +57,7 @@
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@tilepremium")]
-        public Tilepremium? Tilepremium { get; set; }
+        public string? Tilepremium { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@isscaled")]

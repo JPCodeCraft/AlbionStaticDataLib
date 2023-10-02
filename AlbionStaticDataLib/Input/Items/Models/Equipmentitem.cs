@@ -75,19 +75,20 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Durability { get; set; }
 
         [JsonPropertyName("@durabilityloss_attack")]
-        public string DurabilitylossAttack { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double DurabilitylossAttack { get; set; }
 
         [JsonPropertyName("@durabilityloss_spelluse")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long DurabilitylossSpelluse { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double DurabilitylossSpelluse { get; set; }
 
         [JsonPropertyName("@durabilityloss_receivedattack")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long DurabilitylossReceivedattack { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double DurabilitylossReceivedattack { get; set; }
 
         [JsonPropertyName("@durabilityloss_receivedspell")]
-        [JsonConverter(typeof(StringToLongConverter))]
-        public long DurabilitylossReceivedspell { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double DurabilitylossReceivedspell { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@offhandanimationtype")]
@@ -106,14 +107,16 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Hitpointsmax { get; set; }
 
         [JsonPropertyName("@hitpointsregenerationbonus")]
-        public string Hitpointsregenerationbonus { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Hitpointsregenerationbonus { get; set; }
 
         [JsonPropertyName("@energymax")]
         [JsonConverter(typeof(StringToLongConverter))]
         public long Energymax { get; set; }
 
         [JsonPropertyName("@energyregenerationbonus")]
-        public string Energyregenerationbonus { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Energyregenerationbonus { get; set; }
 
         [JsonPropertyName("@crowdcontrolresistance")]
         [JsonConverter(typeof(StringToLongConverter))]
@@ -124,47 +127,60 @@ namespace AlbionStaticDataLib.Input.Items.Models
         public long Itempower { get; set; }
 
         [JsonPropertyName("@physicalattackdamagebonus")]
-        public string Physicalattackdamagebonus { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Physicalattackdamagebonus { get; set; }
 
         [JsonPropertyName("@magicattackdamagebonus")]
-        public string Magicattackdamagebonus { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Magicattackdamagebonus { get; set; }
 
         [JsonPropertyName("@physicalspelldamagebonus")]
-        public string Physicalspelldamagebonus { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Physicalspelldamagebonus { get; set; }
 
         [JsonPropertyName("@magicspelldamagebonus")]
-        public string Magicspelldamagebonus { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Magicspelldamagebonus { get; set; }
 
         [JsonPropertyName("@healbonus")]
-        public string Healbonus { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Healbonus { get; set; }
 
         [JsonPropertyName("@bonusccdurationvsplayers")]
-        public string Bonusccdurationvsplayers { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Bonusccdurationvsplayers { get; set; }
 
         [JsonPropertyName("@bonusccdurationvsmobs")]
-        public string Bonusccdurationvsmobs { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Bonusccdurationvsmobs { get; set; }
 
         [JsonPropertyName("@threatbonus")]
-        public string Threatbonus { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Threatbonus { get; set; }
 
         [JsonPropertyName("@magiccooldownreduction")]
-        public string Magiccooldownreduction { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double Magiccooldownreduction { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@bonusdefensevsplayers")]
-        public string Bonusdefensevsplayers { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Bonusdefensevsplayers { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@bonusdefensevsmobs")]
-        public string Bonusdefensevsmobs { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Bonusdefensevsmobs { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@magiccasttimereduction")]
-        public string Magiccasttimereduction { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Magiccasttimereduction { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@attackspeedbonus")]
-        public string Attackspeedbonus { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Attackspeedbonus { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@movespeedbonus")]
@@ -173,7 +189,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@healmodifier")]
-        public string Healmodifier { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Healmodifier { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@canbeovercharged")]
@@ -187,11 +204,13 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@energycostreduction")]
-        public string Energycostreduction { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Energycostreduction { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@masterymodifier")]
-        public string Masterymodifier { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Masterymodifier { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("craftingrequirements")]
@@ -217,7 +236,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@destinycraftfamefactor")]
-        public string Destinycraftfamefactor { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Destinycraftfamefactor { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("AssetVfxPreset")]
@@ -230,7 +250,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("craftingspelllist")]
-        public EquipmentitemCraftingspelllist Craftingspelllist { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<Craftspell>))]
+        public List<Craftspell> Craftingspelllist { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@descriptionlocatag")]
@@ -261,7 +282,8 @@ namespace AlbionStaticDataLib.Input.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@scalemodifier")]
-        public string Scalemodifier { get; set; }
+        [JsonConverter(typeof(StringToDoubleConverter))]
+        public double? Scalemodifier { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("AudioInfo")]

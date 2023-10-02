@@ -1,7 +1,4 @@
-﻿using System.Text.Json.Serialization;
-using AlbionStaticDataLib.Input.Shared;
-
-namespace AlbionStaticDataLib.Input.Resources.Models
+﻿namespace AlbionStaticDataLib.Input.Resources.Models
 {
     public class Harvestable
     {
@@ -17,6 +14,7 @@ namespace AlbionStaticDataLib.Input.Resources.Models
         public ToolModifier ToolModifier { get; set; }
 
         [JsonPropertyName("Tier")]
-        public TierUnion Tier { get; set; }
+        [JsonConverter(typeof(SingleOrArrayConverter<TierElement>))]
+        public List<TierElement> Tier { get; set; }
     }
 }
