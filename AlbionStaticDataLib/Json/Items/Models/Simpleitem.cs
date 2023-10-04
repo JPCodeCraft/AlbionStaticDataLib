@@ -5,7 +5,7 @@ using AlbionStaticDataLib.Json.Shared.Enums;
 namespace AlbionStaticDataLib.Json.Items.Models
 
 {
-    public class Simpleitem : INamedItem, IBaseItem, ICraftableItem, ICraftCategory
+    public class Simpleitem : ICraftableItem, ICraftCategory
     {
         [JsonPropertyName("@uniquename")]
         public string Uniquename { get; set; }

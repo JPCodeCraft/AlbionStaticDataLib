@@ -4,7 +4,7 @@ using AlbionStaticDataLib.Json.Shared.Converters;
 namespace AlbionStaticDataLib.Json.Items.Models
 
 {
-    public class Killtrophy : INamedItem, IBaseItem, ICraftableItem
+    public class Killtrophy : ICraftableItem
     {
         [JsonPropertyName("@uniquename")]
         public string Uniquename { get; set; }

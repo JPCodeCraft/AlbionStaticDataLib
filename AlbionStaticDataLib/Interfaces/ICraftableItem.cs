@@ -2,7 +2,7 @@
 
 namespace AlbionStaticDataLib.Interfaces
 {
-    internal interface ICraftableItem
+    public interface ICraftableItem : IBaseItem
     {
         public List<Craftingrequirements>? Craftingrequirements { get; set; }
     }

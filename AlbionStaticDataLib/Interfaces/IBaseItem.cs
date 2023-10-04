@@ -2,7 +2,7 @@
 
 namespace AlbionStaticDataLib.Interfaces
 {
-    public interface IBaseItem
+    public interface IBaseItem : INamedItem
     {
         string Uniquename { get; set; }
         int Tier { get; set; }

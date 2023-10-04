@@ -2,7 +2,7 @@
 
 namespace AlbionStaticDataLib.Interfaces
 {
-    internal interface IEnchantableItem
+    public interface IEnchantableItem : ICraftableItem
     {
         public Enchantments? Enchantments { get; set; }
     }

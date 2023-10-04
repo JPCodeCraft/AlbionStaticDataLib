@@ -5,7 +5,7 @@ using AlbionStaticDataLib.Json.Shared.Enums;
 namespace AlbionStaticDataLib.Json.Items.Models
 
 {
-    public class Crystalleagueitem : INamedItem, IBaseItem, ICraftableItem
+    public class Crystalleagueitem : ICraftableItem
     {
         [JsonPropertyName("@uniquename")]
         public string Uniquename { get; set; }

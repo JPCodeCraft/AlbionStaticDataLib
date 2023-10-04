@@ -8,7 +8,7 @@ namespace AlbionStaticDataLib.Json
     /// <summary>
     /// Implements the IAlbionParser interface to parse data from Albion's JSON resources.
     /// </summary>
-    public class AlbionParser
+    public class AlbionParser : IAlbionParser
     {
         private readonly HttpClient _client;
 

@@ -4,7 +4,7 @@ using AlbionStaticDataLib.Json.Shared.Converters;
 namespace AlbionStaticDataLib.Json.Items.Models
 
 {
-    public class Labourercontract : INamedItem, IBaseItem
+    public class Labourercontract : IBaseItem
     {
         [JsonPropertyName("@uniquename")]
         public string Uniquename { get; set; }

@@ -2,7 +2,7 @@
 
 namespace AlbionStaticDataLib.Interfaces
 {
-    public interface ICraftCategory
+    public interface ICraftCategory : ICraftableItem
     {
         Craftingcategory? Craftingcategory { get; set; }
     }

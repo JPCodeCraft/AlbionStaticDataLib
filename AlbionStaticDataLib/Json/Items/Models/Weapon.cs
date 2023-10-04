@@ -4,7 +4,7 @@ using AlbionStaticDataLib.Json.Shared.Converters;
 namespace AlbionStaticDataLib.Json.Items.Models
 
 {
-    public class Weapon : INamedItem, IBaseItem, ICraftableItem, IEnchantableItem, ICraftCategory
+    public class Weapon : IEnchantableItem, ICraftCategory
     {
         [JsonPropertyName("@uniquename")]
         public string Uniquename { get; set; }

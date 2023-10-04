@@ -4,7 +4,7 @@ using AlbionStaticDataLib.Json.Shared.Converters;
 namespace AlbionStaticDataLib.Json.Items.Models
 
 {
-    public class Journalitem : INamedItem, IBaseItem, ICraftableItem
+    public class Journalitem : ICraftableItem
     {
         [JsonPropertyName("@salvageable")]
         [JsonConverter(typeof(StringToBoolConverter))]
