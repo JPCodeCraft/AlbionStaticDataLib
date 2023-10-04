@@ -4,7 +4,7 @@ using AlbionStaticDataLib.Json.Shared.Converters;
 namespace AlbionStaticDataLib.Json.Items.Models
 
 {
-    public class Hideoutitem
+    public class Hideoutitem : INamedItem, IBaseItem, ICraftableItem
     {
         [JsonPropertyName("@uniquename")]
         public string Uniquename { get; set; }
@@ -43,13 +43,13 @@ namespace AlbionStaticDataLib.Json.Items.Models
 
         [JsonPropertyName("@unlockedtocraft")]
         [JsonConverter(typeof(StringToBoolConverter))]
-        public bool Unlockedtocraft { get; set; }
+        public bool? Unlockedtocraft { get; set; }
 
         [JsonPropertyName("@shopcategory")]
         public ShopCategoryName Shopcategory { get; set; }
 
         [JsonPropertyName("@shopsubcategory1")]
-        public ShopsubcategoryName Shopsubcategory1 { get; set; }
+        public ShopsubcategoryName Shopsubcategory { get; set; }
 
         [JsonPropertyName("@uicraftsoundstart")]
         public string Uicraftsoundstart { get; set; }

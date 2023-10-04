@@ -1,10 +1,9 @@
 ﻿using AlbionStaticDataLib.Json.Shared.Converters;
-using System.Text.Json.Serialization;
 
 namespace AlbionStaticDataLib.Json.Items.Models
 
 {
-    public class Mountskin
+    public class Mountskin : INamedItem
     {
         [JsonPropertyName("@uniquename")]
         public string Uniquename { get; set; }

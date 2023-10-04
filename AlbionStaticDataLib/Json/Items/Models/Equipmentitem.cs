@@ -4,7 +4,7 @@ using AlbionStaticDataLib.Json.Shared.Converters;
 namespace AlbionStaticDataLib.Json.Items.Models
 
 {
-    public class Equipmentitem
+    public class Equipmentitem : INamedItem, IBaseItem, ICraftableItem, IEnchantableItem, ICraftCategory
     {
         [JsonPropertyName("@uniquename")]
         public string Uniquename { get; set; }
@@ -15,7 +15,7 @@ namespace AlbionStaticDataLib.Json.Items.Models
 
         [JsonPropertyName("@maxqualitylevel")]
         [JsonConverter(typeof(StringToLongConverter))]
-        public long Maxqualitylevel { get; set; }
+        public long? Maxqualitylevel { get; set; }
 
         [JsonPropertyName("@abilitypower")]
         [JsonConverter(typeof(StringToLongConverter))]
@@ -32,7 +32,7 @@ namespace AlbionStaticDataLib.Json.Items.Models
         public ShopCategoryName Shopcategory { get; set; }
 
         [JsonPropertyName("@shopsubcategory1")]
-        public ShopsubcategoryName Shopsubcategory1 { get; set; }
+        public ShopsubcategoryName Shopsubcategory { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@uicraftsoundstart")]
@@ -97,7 +97,7 @@ namespace AlbionStaticDataLib.Json.Items.Models
 
         [JsonPropertyName("@unlockedtocraft")]
         [JsonConverter(typeof(StringToBoolConverter))]
-        public bool Unlockedtocraft { get; set; }
+        public bool? Unlockedtocraft { get; set; }
 
         [JsonPropertyName("@unlockedtoequip")]
         [JsonConverter(typeof(StringToBoolConverter))]

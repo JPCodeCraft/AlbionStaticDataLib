@@ -4,7 +4,7 @@ using AlbionStaticDataLib.Json.Shared.Converters;
 namespace AlbionStaticDataLib.Json.Items.Models
 
 {
-    public class Farmableitem
+    public class Farmableitem : INamedItem, IBaseItem, ICraftableItem
     {
         [JsonPropertyName("@uniquename")]
         public string Uniquename { get; set; }
@@ -37,7 +37,7 @@ namespace AlbionStaticDataLib.Json.Items.Models
         public ShopCategoryName Shopcategory { get; set; }
 
         [JsonPropertyName("@shopsubcategory1")]
-        public ShopsubcategoryName Shopsubcategory1 { get; set; }
+        public ShopsubcategoryName Shopsubcategory { get; set; }
 
         [JsonPropertyName("@kind")]
         public FarmableItemKind Kind { get; set; }
@@ -48,7 +48,7 @@ namespace AlbionStaticDataLib.Json.Items.Models
 
         [JsonPropertyName("@unlockedtocraft")]
         [JsonConverter(typeof(StringToBoolConverter))]
-        public bool Unlockedtocraft { get; set; }
+        public bool? Unlockedtocraft { get; set; }
 
         [JsonPropertyName("@animationid")]
         public Animationid Animationid { get; set; }

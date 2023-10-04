@@ -5,7 +5,7 @@ using AlbionStaticDataLib.Json.Shared.Enums;
 namespace AlbionStaticDataLib.Json.Items.Models
 
 {
-    public class Consumableitem
+    public class Consumableitem : INamedItem, IBaseItem, ICraftableItem, IEnchantableItem, ICraftCategory
     {
         [JsonPropertyName("@uniquename")]
         public string Uniquename { get; set; }
@@ -51,7 +51,7 @@ namespace AlbionStaticDataLib.Json.Items.Models
         public ShopCategoryName Shopcategory { get; set; }
 
         [JsonPropertyName("@shopsubcategory1")]
-        public ShopsubcategoryName Shopsubcategory1 { get; set; }
+        public ShopsubcategoryName Shopsubcategory { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@resourcetype")]
@@ -77,7 +77,7 @@ namespace AlbionStaticDataLib.Json.Items.Models
 
         [JsonPropertyName("@unlockedtocraft")]
         [JsonConverter(typeof(StringToBoolConverter))]
-        public bool Unlockedtocraft { get; set; }
+        public bool? Unlockedtocraft { get; set; }
 
         [JsonPropertyName("@unlockedtoequip")]
         [JsonConverter(typeof(StringToBoolConverter))]
@@ -102,8 +102,7 @@ namespace AlbionStaticDataLib.Json.Items.Models
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("enchantments")]
-        [JsonConverter(typeof(SingleOrArrayConverter<Enchantment>))]
-        public List<Enchantment>? Enchantments { get; set; }
+        public Enchantments? Enchantments { get; set; }
 
         [JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)]
         [JsonPropertyName("@famevalue")]
